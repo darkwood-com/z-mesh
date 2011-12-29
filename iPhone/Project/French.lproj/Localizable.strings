@@ -1,0 +1,38 @@
+﻿/**
+ *  Localizable.strings
+ *  zMesh
+ *
+ *  Created by Mathieu LEDRU on 14/11/10.
+ *
+ *  GPL License:
+ *  Copyright (c) 2010, Mathieu LEDRU
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *  
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *  
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+"gl.title" = "Mesh";
+
+"protocol.file.title" = "Fichiers";
+
+"protocol.local.title" = "Local";
+"protocol.local.subtitle" = "Enregistrés sur l'appareil";
+"protocol.http.title" = "HTTP";
+"protocol.http.subtitle" = "Téléchargés par une url";
+"protocol.ftp.title" = "FTP";
+"protocol.ftp.subtitle" = "Téléchargés par FTP";
+"protocol.web.title" = "Navigateur";
+"protocol.web.subtitle" = "Téléchargés sur internet";
+"protocol.dropbox.title" = "Dropbox";
+"protocol.dropbox.subtitle" = "Téléchargés sur Dropbox";

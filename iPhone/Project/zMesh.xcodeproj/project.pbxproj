@@ -1,0 +1,936 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		C305ACA612BCFF3D00038090 /* cube.stl in Resources */ = {isa = PBXBuildFile; fileRef = C305AC9A12BCFF3D00038090 /* cube.stl */; };
+		C309203712A1ADA500CC6733 /* ZMeshRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C309203512A1ADA500CC6733 /* ZMeshRenderViewController.m */; };
+		C30A96171296BD9A00867D18 /* ZMeshSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A96151296BD9A00867D18 /* ZMeshSaveViewController.m */; };
+		C33457C612958CC700CB5270 /* ZMeshWebProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */; };
+		C34257B9132D2CF9006E4AD4 /* zMeshDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */; };
+		C34257BA132D2CF9006E4AD4 /* zMeshDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */; };
+		C36689D91293DCCA00EF1FD7 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */; };
+		C3668A211293DDB500EF1FD7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A201293DDB500EF1FD7 /* CFNetwork.framework */; };
+		C3668A361293DDF600EF1FD7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */; };
+		C3668A411293DE0600EF1FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */; };
+		C3668A581293DE1C00EF1FD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A571293DE1C00EF1FD7 /* CoreGraphics.framework */; };
+		C3668D241294226600EF1FD7 /* ZCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3668C5A1294226600EF1FD7 /* ZCamera.cpp */; };
+		C3668D251294226600EF1FD7 /* ZObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3668C5C1294226600EF1FD7 /* ZObject.cpp */; };
+		C3668D261294226600EF1FD7 /* ZWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3668C5E1294226600EF1FD7 /* ZWindow.cpp */; };
+		C3668DB9129423BE00EF1FD7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DB8129423BE00EF1FD7 /* Reachability.m */; };
+		C3668E0A129423C700EF1FD7 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DBC129423C700EF1FD7 /* ASIAuthenticationDialog.m */; };
+		C3668E0B129423C700EF1FD7 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DBF129423C700EF1FD7 /* ASIDataCompressor.m */; };
+		C3668E0C129423C700EF1FD7 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC1129423C700EF1FD7 /* ASIDataDecompressor.m */; };
+		C3668E0D129423C700EF1FD7 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC3129423C700EF1FD7 /* ASIDownloadCache.m */; };
+		C3668E0E129423C700EF1FD7 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC5129423C700EF1FD7 /* ASIFormDataRequest.m */; };
+		C3668E0F129423C700EF1FD7 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC7129423C700EF1FD7 /* ASIHTTPRequest.m */; };
+		C3668E10129423C700EF1FD7 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCB129423C700EF1FD7 /* ASIInputStream.m */; };
+		C3668E11129423C700EF1FD7 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */; };
+		C3668E12129423C700EF1FD7 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */; };
+		C3762297129A63D500E08E0C /* ZMeshLocalProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */; };
+		C37E5FAD1292D66800A685DF /* ZMeshAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C37E5FAB1292D66800A685DF /* ZMeshAppDelegate.mm */; };
+		C37EFF8714AD2CAC00199352 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C37EFF8614AD2CAC00199352 /* libz.1.1.3.dylib */; };
+		C38E131F12951CF00064F532 /* ZMeshCGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E131E12951CF00064F532 /* ZMeshCGLViewController.mm */; };
+		C38E132212951D280064F532 /* ZMeshGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E132112951D280064F532 /* ZMeshGLViewController.mm */; };
+		C38E1355129520870064F532 /* ZMeshCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E1354129520870064F532 /* ZMeshCGLView.mm */; };
+		C398183612BBD698006C20DD /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182C12BBD698006C20DD /* box.png */; };
+		C398183712BBD698006C20DD /* box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182D12BBD698006C20DD /* box@2x.png */; };
+		C398183812BBD698006C20DD /* flat.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182E12BBD698006C20DD /* flat.png */; };
+		C398183912BBD698006C20DD /* flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182F12BBD698006C20DD /* flat@2x.png */; };
+		C398183A12BBD698006C20DD /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183012BBD698006C20DD /* points.png */; };
+		C398183B12BBD698006C20DD /* points@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183112BBD698006C20DD /* points@2x.png */; };
+		C398183C12BBD698006C20DD /* smooth.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183212BBD698006C20DD /* smooth.png */; };
+		C398183D12BBD698006C20DD /* smooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183312BBD698006C20DD /* smooth@2x.png */; };
+		C398183E12BBD698006C20DD /* wire.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183412BBD698006C20DD /* wire.png */; };
+		C398183F12BBD698006C20DD /* wire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398183512BBD698006C20DD /* wire@2x.png */; };
+		C398190D12BBE4B1006C20DD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = C398190B12BBE4B1006C20DD /* save.png */; };
+		C398190E12BBE4B1006C20DD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398190C12BBE4B1006C20DD /* save@2x.png */; };
+		C3AC6AFA1294357E001F3D4B /* ZMeshGenericProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC6AF51294357E001F3D4B /* ZMeshGenericProtocolViewController.m */; };
+		C3AC6AFB1294357E001F3D4B /* ZMeshHTTPProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC6AF71294357E001F3D4B /* ZMeshHTTPProtocolViewController.m */; };
+		C3AC6AFC1294357E001F3D4B /* ZMeshFileProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC6AF91294357E001F3D4B /* ZMeshFileProtocolViewController.m */; };
+		C3C4E46812BD0B4A00F09870 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E46712BD0B4A00F09870 /* Localizable.strings */; };
+		C3C4E4C312BD0ED400F09870 /* ZMeshFileProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4C212BD0ED400F09870 /* ZMeshFileProtocolViewController.xib */; };
+		C3C4E4C512BD0ED400F09870 /* ZMeshRenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4C412BD0ED400F09870 /* ZMeshRenderViewController.xib */; };
+		C3C4E4C712BD0ED400F09870 /* ZMeshWebProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4C612BD0ED400F09870 /* ZMeshWebProtocolViewController.xib */; };
+		C3C4E4C912BD0ED400F09870 /* ZMeshLocalProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4C812BD0ED400F09870 /* ZMeshLocalProtocolCell.xib */; };
+		C3C4E4CB12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4CA12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib */; };
+		C3C4E4CD12BD0ED400F09870 /* ZMeshSaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4CC12BD0ED400F09870 /* ZMeshSaveViewController.xib */; };
+		C3C4E4CF12BD0ED400F09870 /* ZMeshLocalProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4CE12BD0ED400F09870 /* ZMeshLocalProtocolViewController.xib */; };
+		C3C4E4D112BD0ED400F09870 /* ZMeshFileProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E4D012BD0ED400F09870 /* ZMeshFileProtocolCell.xib */; };
+		C3D26C6D12902B7900F135AC /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3D26C6812902B7900F135AC /* EAGLView.mm */; };
+		C3DB8D0A131457F3004362A2 /* zMeshApp.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DB8D08131457F3004362A2 /* zMeshApp.png */; };
+		C3DB8D0B131457F3004362A2 /* zMeshApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DB8D09131457F3004362A2 /* zMeshApp@2x.png */; };
+		C3FEB4E912AE25EC0033C309 /* ZMeshFileProtocolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEB4E712AE25EC0033C309 /* ZMeshFileProtocolCell.m */; };
+		C3FEB5E312AE34AE0033C309 /* cellgo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB5E112AE34AE0033C309 /* cellgo.png */; };
+		C3FEB5E412AE34AE0033C309 /* cellgo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB5E212AE34AE0033C309 /* cellgo@2x.png */; };
+		C3FEB66112AE41AB0033C309 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65612AE41AB0033C309 /* folder.png */; };
+		C3FEB66212AE41AB0033C309 /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65712AE41AB0033C309 /* folder@2x.png */; };
+		C3FEB66312AE41AB0033C309 /* http.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65812AE41AB0033C309 /* http.png */; };
+		C3FEB66412AE41AB0033C309 /* http@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65912AE41AB0033C309 /* http@2x.png */; };
+		C3FEB66512AE41AB0033C309 /* obj.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65B12AE41AB0033C309 /* obj.png */; };
+		C3FEB66612AE41AB0033C309 /* obj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65C12AE41AB0033C309 /* obj@2x.png */; };
+		C3FEB66712AE41AB0033C309 /* stl.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65D12AE41AB0033C309 /* stl.png */; };
+		C3FEB66812AE41AB0033C309 /* stl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65E12AE41AB0033C309 /* stl@2x.png */; };
+		C3FEB66912AE41AB0033C309 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB65F12AE41AB0033C309 /* web.png */; };
+		C3FEB66A12AE41AB0033C309 /* web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FEB66012AE41AB0033C309 /* web@2x.png */; };
+		C3FEB66F12AE420C0033C309 /* ZMeshLocalProtocolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEB66D12AE420C0033C309 /* ZMeshLocalProtocolCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* zMesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zMesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* zMesh_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMesh_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* zMesh-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "zMesh-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C305AC9A12BCFF3D00038090 /* cube.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = cube.stl; sourceTree = "<group>"; };
+		C309203412A1ADA500CC6733 /* ZMeshRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshRenderViewController.h; sourceTree = "<group>"; };
+		C309203512A1ADA500CC6733 /* ZMeshRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshRenderViewController.m; sourceTree = "<group>"; };
+		C309203612A1ADA500CC6733 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
+		C309207C12A1B6DB00CC6733 /* ZMeshCGLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshCGLDelegate.h; sourceTree = "<group>"; };
+		C30A96141296BD9A00867D18 /* ZMeshSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshSaveViewController.h; sourceTree = "<group>"; };
+		C30A96151296BD9A00867D18 /* ZMeshSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshSaveViewController.m; sourceTree = "<group>"; };
+		C30A96161296BD9A00867D18 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshSaveViewController.xib; sourceTree = "<group>"; };
+		C3209EBC129518AC004231CD /* ZMeshApple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshApple.h; sourceTree = "<group>"; };
+		C334579D1295896200CB5270 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
+		C33457C312958CC700CB5270 /* ZMeshWebProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshWebProtocolViewController.h; sourceTree = "<group>"; };
+		C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshWebProtocolViewController.m; sourceTree = "<group>"; };
+		C33457C512958CC700CB5270 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
+		C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshDefault.png; sourceTree = "<group>"; };
+		C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault@2x.png"; sourceTree = "<group>"; };
+		C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
+		C3668A201293DDB500EF1FD7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C3668A571293DE1C00EF1FD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3668C581294226600EF1FD7 /* ZOpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOpenGL.h; sourceTree = "<group>"; };
+		C3668C5A1294226600EF1FD7 /* ZCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZCamera.cpp; sourceTree = "<group>"; };
+		C3668C5B1294226600EF1FD7 /* ZCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
+		C3668C5C1294226600EF1FD7 /* ZObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZObject.cpp; sourceTree = "<group>"; };
+		C3668C5D1294226600EF1FD7 /* ZObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZObject.h; sourceTree = "<group>"; };
+		C3668C5E1294226600EF1FD7 /* ZWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZWindow.cpp; sourceTree = "<group>"; };
+		C3668C5F1294226600EF1FD7 /* ZWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWindow.h; sourceTree = "<group>"; };
+		C3668DB7129423BE00EF1FD7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C3668DB8129423BE00EF1FD7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C3668DBB129423C700EF1FD7 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		C3668DBC129423C700EF1FD7 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		C3668DBD129423C700EF1FD7 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		C3668DBE129423C700EF1FD7 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		C3668DBF129423C700EF1FD7 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		C3668DC0129423C700EF1FD7 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		C3668DC1129423C700EF1FD7 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		C3668DC2129423C700EF1FD7 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		C3668DC3129423C700EF1FD7 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		C3668DC4129423C700EF1FD7 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		C3668DC5129423C700EF1FD7 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		C3668DC6129423C700EF1FD7 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		C3668DC7129423C700EF1FD7 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		C3668DC8129423C700EF1FD7 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		C3668DC9129423C700EF1FD7 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		C3668DCA129423C700EF1FD7 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		C3668DCB129423C700EF1FD7 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		C3668DCC129423C700EF1FD7 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		C3668DCE129423C700EF1FD7 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		C3668DCF129423C700EF1FD7 /* ASIWebPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIWebPageRequest.h; sourceTree = "<group>"; };
+		C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIWebPageRequest.m; sourceTree = "<group>"; };
+		C376000312967F7A0088D514 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3762294129A63D500E08E0C /* ZMeshLocalProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolViewController.h; sourceTree = "<group>"; };
+		C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolViewController.m; sourceTree = "<group>"; };
+		C3762296129A63D500E08E0C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
+		C37E5FAB1292D66800A685DF /* ZMeshAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshAppDelegate.mm; sourceTree = "<group>"; };
+		C37EFF8614AD2CAC00199352 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		C38E131D12951CF00064F532 /* ZMeshCGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshCGLViewController.h; sourceTree = "<group>"; };
+		C38E131E12951CF00064F532 /* ZMeshCGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshCGLViewController.mm; sourceTree = "<group>"; };
+		C38E132012951D280064F532 /* ZMeshGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshGLViewController.h; sourceTree = "<group>"; };
+		C38E132112951D280064F532 /* ZMeshGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshGLViewController.mm; sourceTree = "<group>"; };
+		C38E1353129520870064F532 /* ZMeshCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshCGLView.h; sourceTree = "<group>"; };
+		C38E1354129520870064F532 /* ZMeshCGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshCGLView.mm; sourceTree = "<group>"; };
+		C398182C12BBD698006C20DD /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		C398182D12BBD698006C20DD /* box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box@2x.png"; sourceTree = "<group>"; };
+		C398182E12BBD698006C20DD /* flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat.png; sourceTree = "<group>"; };
+		C398182F12BBD698006C20DD /* flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat@2x.png"; sourceTree = "<group>"; };
+		C398183012BBD698006C20DD /* points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points.png; sourceTree = "<group>"; };
+		C398183112BBD698006C20DD /* points@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "points@2x.png"; sourceTree = "<group>"; };
+		C398183212BBD698006C20DD /* smooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smooth.png; sourceTree = "<group>"; };
+		C398183312BBD698006C20DD /* smooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smooth@2x.png"; sourceTree = "<group>"; };
+		C398183412BBD698006C20DD /* wire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wire.png; sourceTree = "<group>"; };
+		C398183512BBD698006C20DD /* wire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wire@2x.png"; sourceTree = "<group>"; };
+		C398190B12BBE4B1006C20DD /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = ../../iPad/Bin/Interface/save.png; sourceTree = SOURCE_ROOT; };
+		C398190C12BBE4B1006C20DD /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "save@2x.png"; path = "../../iPad/Bin/Interface/save@2x.png"; sourceTree = SOURCE_ROOT; };
+		C3AC6AF41294357E001F3D4B /* ZMeshGenericProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshGenericProtocolViewController.h; sourceTree = "<group>"; };
+		C3AC6AF51294357E001F3D4B /* ZMeshGenericProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshGenericProtocolViewController.m; sourceTree = "<group>"; };
+		C3AC6AF61294357E001F3D4B /* ZMeshHTTPProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshHTTPProtocolViewController.h; sourceTree = "<group>"; };
+		C3AC6AF71294357E001F3D4B /* ZMeshHTTPProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshHTTPProtocolViewController.m; sourceTree = "<group>"; };
+		C3AC6AF81294357E001F3D4B /* ZMeshFileProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshFileProtocolViewController.h; sourceTree = "<group>"; };
+		C3AC6AF91294357E001F3D4B /* ZMeshFileProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshFileProtocolViewController.m; sourceTree = "<group>"; };
+		C3B0CEB7129ACB3B00D9F16B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E46912BD0B5100F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3C4E46A12BD0B5300F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3C4E50912BD0FBE00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshSaveViewController.xib; sourceTree = "<group>"; };
+		C3C4E50A12BD0FC200F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshSaveViewController.xib; sourceTree = "<group>"; };
+		C3C4E50C12BD0FDA00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
+		C3C4E50D12BD0FDD00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
+		C3C4E50E12BD0FE300F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E50F12BD0FE500F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51012BD0FEC00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
+		C3C4E51112BD0FEE00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
+		C3C4E51212BD0FF400F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51312BD0FF700F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51412BD0FFC00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51512BD0FFF00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51612BD100400F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
+		C3C4E51712BD100700F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
+		C3C4E51812BD100D00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
+		C3C4E51912BD100F00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
+		C3D26C6712902B7900F135AC /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		C3D26C6812902B7900F135AC /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
+		C3D26C6912902B7900F135AC /* ZMeshAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshAppDelegate.h; sourceTree = "<group>"; };
+		C3DB8D08131457F3004362A2 /* zMeshApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshApp.png; sourceTree = "<group>"; };
+		C3DB8D09131457F3004362A2 /* zMeshApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshApp@2x.png"; sourceTree = "<group>"; };
+		C3FEB4E612AE25EC0033C309 /* ZMeshFileProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshFileProtocolCell.h; sourceTree = "<group>"; };
+		C3FEB4E712AE25EC0033C309 /* ZMeshFileProtocolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshFileProtocolCell.m; sourceTree = "<group>"; };
+		C3FEB4E812AE25EC0033C309 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
+		C3FEB5E112AE34AE0033C309 /* cellgo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellgo.png; sourceTree = "<group>"; };
+		C3FEB5E212AE34AE0033C309 /* cellgo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellgo@2x.png"; sourceTree = "<group>"; };
+		C3FEB65612AE41AB0033C309 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		C3FEB65712AE41AB0033C309 /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder@2x.png"; sourceTree = "<group>"; };
+		C3FEB65812AE41AB0033C309 /* http.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = http.png; sourceTree = "<group>"; };
+		C3FEB65912AE41AB0033C309 /* http@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "http@2x.png"; sourceTree = "<group>"; };
+		C3FEB65B12AE41AB0033C309 /* obj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obj.png; sourceTree = "<group>"; };
+		C3FEB65C12AE41AB0033C309 /* obj@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "obj@2x.png"; sourceTree = "<group>"; };
+		C3FEB65D12AE41AB0033C309 /* stl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stl.png; sourceTree = "<group>"; };
+		C3FEB65E12AE41AB0033C309 /* stl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stl@2x.png"; sourceTree = "<group>"; };
+		C3FEB65F12AE41AB0033C309 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		C3FEB66012AE41AB0033C309 /* web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web@2x.png"; sourceTree = "<group>"; };
+		C3FEB66C12AE420C0033C309 /* ZMeshLocalProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolCell.h; sourceTree = "<group>"; };
+		C3FEB66D12AE420C0033C309 /* ZMeshLocalProtocolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolCell.m; sourceTree = "<group>"; };
+		C3FEB66E12AE420C0033C309 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37EFF8714AD2CAC00199352 /* libz.1.1.3.dylib in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				C36689D91293DCCA00EF1FD7 /* libxml2.2.7.3.dylib in Frameworks */,
+				C3668A211293DDB500EF1FD7 /* CFNetwork.framework in Frameworks */,
+				C3668A361293DDF600EF1FD7 /* MobileCoreServices.framework in Frameworks */,
+				C3668A411293DE0600EF1FD7 /* SystemConfiguration.framework in Frameworks */,
+				C3668A581293DE1C00EF1FD7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* zMesh.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C541294226600EF1FD7 /* Src - Common */,
+				C3D26C6412902B7900F135AC /* Src - Platform */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* zMesh_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C305AC9212BCFF3D00038090 /* Models */,
+				8D1107310486CEB800E47090 /* zMesh-Info.plist */,
+				C3C4E46712BD0B4A00F09870 /* Localizable.strings */,
+				C3DB8D08131457F3004362A2 /* zMeshApp.png */,
+				C3DB8D09131457F3004362A2 /* zMeshApp@2x.png */,
+				C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */,
+				C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */,
+				C3FEB5E012AE34AE0033C309 /* Interface */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				C3668A201293DDB500EF1FD7 /* CFNetwork.framework */,
+				C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */,
+				C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */,
+				C3668A571293DE1C00EF1FD7 /* CoreGraphics.framework */,
+				C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */,
+				C37EFF8614AD2CAC00199352 /* libz.1.1.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C305AC9212BCFF3D00038090 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C305AC9712BCFF3D00038090 /* stl */,
+			);
+			name = Models;
+			path = ../../Common/Bin/Data/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		C305AC9712BCFF3D00038090 /* stl */ = {
+			isa = PBXGroup;
+			children = (
+				C305AC9A12BCFF3D00038090 /* cube.stl */,
+			);
+			path = stl;
+			sourceTree = "<group>";
+		};
+		C309207B12A1B6DB00CC6733 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C309207C12A1B6DB00CC6733 /* ZMeshCGLDelegate.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C3209EA71295184C004231CD /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				C3209EBC129518AC004231CD /* ZMeshApple.h */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		C3668C541294226600EF1FD7 /* Src - Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C551294226600EF1FD7 /* CPP */,
+				C3668C601294226600EF1FD7 /* ObjectiveC */,
+			);
+			name = "Src - Common";
+			path = ../../Common/Src;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3668C551294226600EF1FD7 /* CPP */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C561294226600EF1FD7 /* Externals */,
+				C3668C591294226600EF1FD7 /* zMesh */,
+			);
+			path = CPP;
+			sourceTree = "<group>";
+		};
+		C3668C561294226600EF1FD7 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C571294226600EF1FD7 /* OpenGL */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C3668C571294226600EF1FD7 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C581294226600EF1FD7 /* ZOpenGL.h */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		C3668C591294226600EF1FD7 /* zMesh */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C5B1294226600EF1FD7 /* ZCamera.h */,
+				C3668C5A1294226600EF1FD7 /* ZCamera.cpp */,
+				C3668C5D1294226600EF1FD7 /* ZObject.h */,
+				C3668C5C1294226600EF1FD7 /* ZObject.cpp */,
+				C3668C5F1294226600EF1FD7 /* ZWindow.h */,
+				C3668C5E1294226600EF1FD7 /* ZWindow.cpp */,
+			);
+			path = zMesh;
+			sourceTree = "<group>";
+		};
+		C3668C601294226600EF1FD7 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				C3668C611294226600EF1FD7 /* Externals */,
+				C3668D231294226600EF1FD7 /* zMesh */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		C3668C611294226600EF1FD7 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C3209EA71295184C004231CD /* Apple */,
+				C3668DBA129423C700EF1FD7 /* AsiHTTP */,
+				C3668DB6129423BE00EF1FD7 /* Reachability */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C3668D231294226600EF1FD7 /* zMesh */ = {
+			isa = PBXGroup;
+			children = (
+				C309207B12A1B6DB00CC6733 /* Interface */,
+				C38E1353129520870064F532 /* ZMeshCGLView.h */,
+				C38E1354129520870064F532 /* ZMeshCGLView.mm */,
+				C38E131D12951CF00064F532 /* ZMeshCGLViewController.h */,
+				C38E131E12951CF00064F532 /* ZMeshCGLViewController.mm */,
+			);
+			path = zMesh;
+			sourceTree = "<group>";
+		};
+		C3668DB6129423BE00EF1FD7 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C3668DB7129423BE00EF1FD7 /* Reachability.h */,
+				C3668DB8129423BE00EF1FD7 /* Reachability.m */,
+			);
+			name = Reachability;
+			path = AsiHTTP/External/Reachability;
+			sourceTree = "<group>";
+		};
+		C3668DBA129423C700EF1FD7 /* AsiHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				C3668DBB129423C700EF1FD7 /* ASIAuthenticationDialog.h */,
+				C3668DBC129423C700EF1FD7 /* ASIAuthenticationDialog.m */,
+				C3668DBD129423C700EF1FD7 /* ASICacheDelegate.h */,
+				C3668DBE129423C700EF1FD7 /* ASIDataCompressor.h */,
+				C3668DBF129423C700EF1FD7 /* ASIDataCompressor.m */,
+				C3668DC0129423C700EF1FD7 /* ASIDataDecompressor.h */,
+				C3668DC1129423C700EF1FD7 /* ASIDataDecompressor.m */,
+				C3668DC2129423C700EF1FD7 /* ASIDownloadCache.h */,
+				C3668DC3129423C700EF1FD7 /* ASIDownloadCache.m */,
+				C3668DC4129423C700EF1FD7 /* ASIFormDataRequest.h */,
+				C3668DC5129423C700EF1FD7 /* ASIFormDataRequest.m */,
+				C3668DC6129423C700EF1FD7 /* ASIHTTPRequest.h */,
+				C3668DC7129423C700EF1FD7 /* ASIHTTPRequest.m */,
+				C3668DC8129423C700EF1FD7 /* ASIHTTPRequestConfig.h */,
+				C3668DC9129423C700EF1FD7 /* ASIHTTPRequestDelegate.h */,
+				C3668DCA129423C700EF1FD7 /* ASIInputStream.h */,
+				C3668DCB129423C700EF1FD7 /* ASIInputStream.m */,
+				C3668DCC129423C700EF1FD7 /* ASINetworkQueue.h */,
+				C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */,
+				C3668DCE129423C700EF1FD7 /* ASIProgressDelegate.h */,
+				C3668DCF129423C700EF1FD7 /* ASIWebPageRequest.h */,
+				C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */,
+			);
+			name = AsiHTTP;
+			path = AsiHTTP/Classes;
+			sourceTree = "<group>";
+		};
+		C398182B12BBD698006C20DD /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				C398182C12BBD698006C20DD /* box.png */,
+				C398182D12BBD698006C20DD /* box@2x.png */,
+				C398182E12BBD698006C20DD /* flat.png */,
+				C398182F12BBD698006C20DD /* flat@2x.png */,
+				C398183012BBD698006C20DD /* points.png */,
+				C398183112BBD698006C20DD /* points@2x.png */,
+				C398183212BBD698006C20DD /* smooth.png */,
+				C398183312BBD698006C20DD /* smooth@2x.png */,
+				C398183412BBD698006C20DD /* wire.png */,
+				C398183512BBD698006C20DD /* wire@2x.png */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		C3AC6AF21294357E001F3D4B /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC6AF31294357E001F3D4B /* Protocol */,
+				C3FEB4E512AE25EC0033C309 /* ZMeshFileProtocol */,
+				C3AC6AF81294357E001F3D4B /* ZMeshFileProtocolViewController.h */,
+				C3AC6AF91294357E001F3D4B /* ZMeshFileProtocolViewController.m */,
+				C3C4E4C212BD0ED400F09870 /* ZMeshFileProtocolViewController.xib */,
+				C309203412A1ADA500CC6733 /* ZMeshRenderViewController.h */,
+				C309203512A1ADA500CC6733 /* ZMeshRenderViewController.m */,
+				C3C4E4C412BD0ED400F09870 /* ZMeshRenderViewController.xib */,
+				C30A96141296BD9A00867D18 /* ZMeshSaveViewController.h */,
+				C30A96151296BD9A00867D18 /* ZMeshSaveViewController.m */,
+				C3C4E4CC12BD0ED400F09870 /* ZMeshSaveViewController.xib */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C3AC6AF31294357E001F3D4B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C3AC6AF41294357E001F3D4B /* ZMeshGenericProtocolViewController.h */,
+				C3AC6AF51294357E001F3D4B /* ZMeshGenericProtocolViewController.m */,
+				C3AC6AF61294357E001F3D4B /* ZMeshHTTPProtocolViewController.h */,
+				C3AC6AF71294357E001F3D4B /* ZMeshHTTPProtocolViewController.m */,
+				C3C4E4CA12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib */,
+				C3FEB66B12AE420C0033C309 /* ZMeshLocalProtocolView */,
+				C3762294129A63D500E08E0C /* ZMeshLocalProtocolViewController.h */,
+				C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */,
+				C3C4E4CE12BD0ED400F09870 /* ZMeshLocalProtocolViewController.xib */,
+				C33457C312958CC700CB5270 /* ZMeshWebProtocolViewController.h */,
+				C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */,
+				C3C4E4C612BD0ED400F09870 /* ZMeshWebProtocolViewController.xib */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C3D26C6412902B7900F135AC /* Src - Platform */ = {
+			isa = PBXGroup;
+			children = (
+				C3D26C6512902B7900F135AC /* Externals */,
+				C3D26C6612902B7900F135AC /* zMesh */,
+			);
+			name = "Src - Platform";
+			path = ../Src;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3D26C6512902B7900F135AC /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C3D26C6612902B7900F135AC /* zMesh */ = {
+			isa = PBXGroup;
+			children = (
+				C3D26C6712902B7900F135AC /* EAGLView.h */,
+				C3D26C6812902B7900F135AC /* EAGLView.mm */,
+				C3AC6AF21294357E001F3D4B /* Interface */,
+				C3D26C6912902B7900F135AC /* ZMeshAppDelegate.h */,
+				C37E5FAB1292D66800A685DF /* ZMeshAppDelegate.mm */,
+				C38E132012951D280064F532 /* ZMeshGLViewController.h */,
+				C38E132112951D280064F532 /* ZMeshGLViewController.mm */,
+			);
+			path = zMesh;
+			sourceTree = "<group>";
+		};
+		C3FEB4E512AE25EC0033C309 /* ZMeshFileProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEB4E612AE25EC0033C309 /* ZMeshFileProtocolCell.h */,
+				C3FEB4E712AE25EC0033C309 /* ZMeshFileProtocolCell.m */,
+				C3C4E4D012BD0ED400F09870 /* ZMeshFileProtocolCell.xib */,
+			);
+			path = ZMeshFileProtocol;
+			sourceTree = "<group>";
+		};
+		C3FEB5E012AE34AE0033C309 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEB5E112AE34AE0033C309 /* cellgo.png */,
+				C3FEB5E212AE34AE0033C309 /* cellgo@2x.png */,
+				C3FEB65512AE41AB0033C309 /* FileProtocol */,
+				C398182B12BBD698006C20DD /* Render */,
+				C398190B12BBE4B1006C20DD /* save.png */,
+				C398190C12BBE4B1006C20DD /* save@2x.png */,
+			);
+			name = Interface;
+			path = ../Bin/Interface;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3FEB65512AE41AB0033C309 /* FileProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEB65612AE41AB0033C309 /* folder.png */,
+				C3FEB65712AE41AB0033C309 /* folder@2x.png */,
+				C3FEB65812AE41AB0033C309 /* http.png */,
+				C3FEB65912AE41AB0033C309 /* http@2x.png */,
+				C3FEB65A12AE41AB0033C309 /* Local */,
+				C3FEB65F12AE41AB0033C309 /* web.png */,
+				C3FEB66012AE41AB0033C309 /* web@2x.png */,
+			);
+			path = FileProtocol;
+			sourceTree = "<group>";
+		};
+		C3FEB65A12AE41AB0033C309 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEB65B12AE41AB0033C309 /* obj.png */,
+				C3FEB65C12AE41AB0033C309 /* obj@2x.png */,
+				C3FEB65D12AE41AB0033C309 /* stl.png */,
+				C3FEB65E12AE41AB0033C309 /* stl@2x.png */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C3FEB66B12AE420C0033C309 /* ZMeshLocalProtocolView */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEB66C12AE420C0033C309 /* ZMeshLocalProtocolCell.h */,
+				C3FEB66D12AE420C0033C309 /* ZMeshLocalProtocolCell.m */,
+				C3C4E4C812BD0ED400F09870 /* ZMeshLocalProtocolCell.xib */,
+			);
+			path = ZMeshLocalProtocolView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* zMesh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zMesh" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zMesh;
+			productName = zMesh;
+			productReference = 1D6058910D05DD3D006BFB54 /* zMesh.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "zMesh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* zMesh */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C4E4CB12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib in Resources */,
+				C3C4E4C712BD0ED400F09870 /* ZMeshWebProtocolViewController.xib in Resources */,
+				C3C4E46812BD0B4A00F09870 /* Localizable.strings in Resources */,
+				C3C4E4CD12BD0ED400F09870 /* ZMeshSaveViewController.xib in Resources */,
+				C3C4E4CF12BD0ED400F09870 /* ZMeshLocalProtocolViewController.xib in Resources */,
+				C3C4E4C312BD0ED400F09870 /* ZMeshFileProtocolViewController.xib in Resources */,
+				C3C4E4C512BD0ED400F09870 /* ZMeshRenderViewController.xib in Resources */,
+				C3C4E4D112BD0ED400F09870 /* ZMeshFileProtocolCell.xib in Resources */,
+				C3FEB5E312AE34AE0033C309 /* cellgo.png in Resources */,
+				C3FEB5E412AE34AE0033C309 /* cellgo@2x.png in Resources */,
+				C3FEB66112AE41AB0033C309 /* folder.png in Resources */,
+				C3FEB66212AE41AB0033C309 /* folder@2x.png in Resources */,
+				C3FEB66312AE41AB0033C309 /* http.png in Resources */,
+				C3FEB66412AE41AB0033C309 /* http@2x.png in Resources */,
+				C3FEB66512AE41AB0033C309 /* obj.png in Resources */,
+				C3FEB66612AE41AB0033C309 /* obj@2x.png in Resources */,
+				C3FEB66712AE41AB0033C309 /* stl.png in Resources */,
+				C3FEB66812AE41AB0033C309 /* stl@2x.png in Resources */,
+				C3FEB66912AE41AB0033C309 /* web.png in Resources */,
+				C3FEB66A12AE41AB0033C309 /* web@2x.png in Resources */,
+				C3C4E4C912BD0ED400F09870 /* ZMeshLocalProtocolCell.xib in Resources */,
+				C398183612BBD698006C20DD /* box.png in Resources */,
+				C398183712BBD698006C20DD /* box@2x.png in Resources */,
+				C398183812BBD698006C20DD /* flat.png in Resources */,
+				C398183912BBD698006C20DD /* flat@2x.png in Resources */,
+				C398183A12BBD698006C20DD /* points.png in Resources */,
+				C398183B12BBD698006C20DD /* points@2x.png in Resources */,
+				C398183C12BBD698006C20DD /* smooth.png in Resources */,
+				C398183D12BBD698006C20DD /* smooth@2x.png in Resources */,
+				C398183E12BBD698006C20DD /* wire.png in Resources */,
+				C398183F12BBD698006C20DD /* wire@2x.png in Resources */,
+				C398190D12BBE4B1006C20DD /* save.png in Resources */,
+				C398190E12BBE4B1006C20DD /* save@2x.png in Resources */,
+				C305ACA612BCFF3D00038090 /* cube.stl in Resources */,
+				C3DB8D0A131457F3004362A2 /* zMeshApp.png in Resources */,
+				C3DB8D0B131457F3004362A2 /* zMeshApp@2x.png in Resources */,
+				C34257B9132D2CF9006E4AD4 /* zMeshDefault.png in Resources */,
+				C34257BA132D2CF9006E4AD4 /* zMeshDefault@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				C3D26C6D12902B7900F135AC /* EAGLView.mm in Sources */,
+				C37E5FAD1292D66800A685DF /* ZMeshAppDelegate.mm in Sources */,
+				C3668D241294226600EF1FD7 /* ZCamera.cpp in Sources */,
+				C3668D251294226600EF1FD7 /* ZObject.cpp in Sources */,
+				C3668D261294226600EF1FD7 /* ZWindow.cpp in Sources */,
+				C3668DB9129423BE00EF1FD7 /* Reachability.m in Sources */,
+				C3668E0A129423C700EF1FD7 /* ASIAuthenticationDialog.m in Sources */,
+				C3668E0B129423C700EF1FD7 /* ASIDataCompressor.m in Sources */,
+				C3668E0C129423C700EF1FD7 /* ASIDataDecompressor.m in Sources */,
+				C3668E0D129423C700EF1FD7 /* ASIDownloadCache.m in Sources */,
+				C3668E0E129423C700EF1FD7 /* ASIFormDataRequest.m in Sources */,
+				C3668E0F129423C700EF1FD7 /* ASIHTTPRequest.m in Sources */,
+				C3668E10129423C700EF1FD7 /* ASIInputStream.m in Sources */,
+				C3668E11129423C700EF1FD7 /* ASINetworkQueue.m in Sources */,
+				C3668E12129423C700EF1FD7 /* ASIWebPageRequest.m in Sources */,
+				C3AC6AFA1294357E001F3D4B /* ZMeshGenericProtocolViewController.m in Sources */,
+				C3AC6AFB1294357E001F3D4B /* ZMeshHTTPProtocolViewController.m in Sources */,
+				C3AC6AFC1294357E001F3D4B /* ZMeshFileProtocolViewController.m in Sources */,
+				C38E131F12951CF00064F532 /* ZMeshCGLViewController.mm in Sources */,
+				C38E132212951D280064F532 /* ZMeshGLViewController.mm in Sources */,
+				C38E1355129520870064F532 /* ZMeshCGLView.mm in Sources */,
+				C33457C612958CC700CB5270 /* ZMeshWebProtocolViewController.m in Sources */,
+				C30A96171296BD9A00867D18 /* ZMeshSaveViewController.m in Sources */,
+				C3762297129A63D500E08E0C /* ZMeshLocalProtocolViewController.m in Sources */,
+				C309203712A1ADA500CC6733 /* ZMeshRenderViewController.m in Sources */,
+				C3FEB4E912AE25EC0033C309 /* ZMeshFileProtocolCell.m in Sources */,
+				C3FEB66F12AE420C0033C309 /* ZMeshLocalProtocolCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3C4E46712BD0B4A00F09870 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C376000312967F7A0088D514 /* English */,
+				C3C4E46912BD0B5100F09870 /* French */,
+				C3C4E46A12BD0B5300F09870 /* German */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C3C4E4C212BD0ED400F09870 /* ZMeshFileProtocolViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3B0CEB7129ACB3B00D9F16B /* English */,
+				C3C4E50E12BD0FE300F09870 /* French */,
+				C3C4E50F12BD0FE500F09870 /* German */,
+			);
+			name = ZMeshFileProtocolViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4C412BD0ED400F09870 /* ZMeshRenderViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C309203612A1ADA500CC6733 /* English */,
+				C3C4E50C12BD0FDA00F09870 /* French */,
+				C3C4E50D12BD0FDD00F09870 /* German */,
+			);
+			name = ZMeshRenderViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4C612BD0ED400F09870 /* ZMeshWebProtocolViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C33457C512958CC700CB5270 /* English */,
+				C3C4E51212BD0FF400F09870 /* French */,
+				C3C4E51312BD0FF700F09870 /* German */,
+			);
+			name = ZMeshWebProtocolViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4C812BD0ED400F09870 /* ZMeshLocalProtocolCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FEB66E12AE420C0033C309 /* English */,
+				C3C4E51612BD100400F09870 /* French */,
+				C3C4E51712BD100700F09870 /* German */,
+			);
+			name = ZMeshLocalProtocolCell.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4CA12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C334579D1295896200CB5270 /* English */,
+				C3C4E51812BD100D00F09870 /* French */,
+				C3C4E51912BD100F00F09870 /* German */,
+			);
+			name = ZMeshHTTPProtocolViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4CC12BD0ED400F09870 /* ZMeshSaveViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C30A96161296BD9A00867D18 /* English */,
+				C3C4E50912BD0FBE00F09870 /* French */,
+				C3C4E50A12BD0FC200F09870 /* German */,
+			);
+			name = ZMeshSaveViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4CE12BD0ED400F09870 /* ZMeshLocalProtocolViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3762296129A63D500E08E0C /* English */,
+				C3C4E51412BD0FFC00F09870 /* French */,
+				C3C4E51512BD0FFF00F09870 /* German */,
+			);
+			name = ZMeshLocalProtocolViewController.xib;
+			sourceTree = "<group>";
+		};
+		C3C4E4D012BD0ED400F09870 /* ZMeshFileProtocolCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FEB4E812AE25EC0033C309 /* English */,
+				C3C4E51012BD0FEC00F09870 /* French */,
+				C3C4E51112BD0FEE00F09870 /* German */,
+			);
+			name = ZMeshFileProtocolCell.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = zMesh_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					D_IPHONE,
+					DEBUG,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = (
+					"\"${SDK_DIR}/usr/include/libxml2\"",
+					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
+				);
+				INFOPLIST_FILE = "zMesh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = zMesh;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = zMesh_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = D_IPHONE;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = (
+					"\"${SDK_DIR}/usr/include/libxml2\"",
+					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
+				);
+				INFOPLIST_FILE = "zMesh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = zMesh;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "zMesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "zMesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
