@@ -208,9 +208,12 @@
 	if (metadata.isDirectory && [metadata.path isEqualToString:@"/"])
 	{
 		self.directoryContent = [NSMutableArray array];
-		for (DBMetadata *file in metadata.contents)
+		for (DBMetadata* file in metadata.contents)
 		{
-			[self.directoryContent addObject:file.filename];
+			if(!file.isDirectory)
+			{
+				[self.directoryContent addObject:file.filename];
+			}
 		}
 		
 		[self.tableView reloadData];
