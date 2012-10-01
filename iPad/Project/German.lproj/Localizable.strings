@@ -1,4 +1,4 @@
-﻿/**
+/**
  *  Localizable.strings
  *  zMesh
  *
@@ -36,3 +36,5 @@
 "protocol.web.subtitle" = "Heruntergeladen im Internet";
 "protocol.dropbox.title" = "Dropbox";
 "protocol.dropbox.subtitle" = "Heruntergeladen auf Dropbox";
+"protocol.dropbox.login" = "Anmelden Dropbox";
+"protocol.dropbox.logout" = "Abmelden Dropbox";

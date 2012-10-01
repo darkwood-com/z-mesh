@@ -27,6 +27,7 @@
 #import "ZMeshHTTPProtocolViewController.h"
 #import "ZMeshWebProtocolViewController.h"
 #import "ZMeshLocalProtocolViewController.h"
+#import "ZMeshDropBoxProtocolViewController.h"
 #import "ZMeshFileProtocolCell.h"
 
 @implementation ZMeshFileProtocolViewController
@@ -61,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView*)aTableView numberOfRowsInSection:(NSInteger)section
 {
-	return 3;
+	return 4;
 }
 
 - (UITableViewCell*) tableView:(UITableView*) aTableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
@@ -95,12 +96,13 @@
 			cell.picto.image = [UIImage imageNamed:@"web.png"];
 		break;
 		case 3:
-			cell.title.text = NSLocalizedString(@"protocol.ftp.title", @"");
-			cell.subtitle.text = NSLocalizedString(@"protocol.ftp.subtitle", @"");
-		break;
-		case 4:
 			cell.title.text = NSLocalizedString(@"protocol.dropbox.title", @"");
 			cell.subtitle.text = NSLocalizedString(@"protocol.dropbox.subtitle", @"");
+			cell.picto.image = [UIImage imageNamed:@"dropbox.png"];
+			break;
+		case 4:
+			cell.title.text = NSLocalizedString(@"protocol.ftp.title", @"");
+			cell.subtitle.text = NSLocalizedString(@"protocol.ftp.subtitle", @"");
 		break;
 	}
     
@@ -115,19 +117,11 @@
 	
 	switch ([indexPath row])
 	{
-		case 0:
-			protocolController = [[[ZMeshLocalProtocolViewController alloc] init] autorelease];
-		break;
-		case 1:
-			protocolController = [[[ZMeshHTTPProtocolViewController alloc] init] autorelease];
-		break;
-		case 2:
-			protocolController = [[[ZMeshWebProtocolViewController alloc] init] autorelease];
-		break;
-		case 3:
-		break;
-		case 4:
-		break;
+		case 0: protocolController = [[[ZMeshLocalProtocolViewController alloc] init] autorelease]; break;
+		case 1: protocolController = [[[ZMeshHTTPProtocolViewController alloc] init] autorelease]; break;
+		case 2: protocolController = [[[ZMeshWebProtocolViewController alloc] init] autorelease]; break;
+		case 3: protocolController = [[[ZMeshDropBoxProtocolViewController alloc] init] autorelease]; break;
+		case 4: break;
 	}
 	
 	protocolController.delegate = self.delegate;

@@ -16,6 +16,18 @@
 		C30B46B916186BED00D44BBB /* zMeshApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46B816186BED00D44BBB /* zMeshApp@2x.png */; };
 		C30B46BC1618730A00D44BBB /* zMeshDefault-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46BA1618730A00D44BBB /* zMeshDefault-Landscape@2x.png */; };
 		C30B46BD1618730A00D44BBB /* zMeshDefault-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46BB1618730A00D44BBB /* zMeshDefault-Portrait@2x.png */; };
+		C37B9616161A0A9E00BC3DA6 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = C37B9614161A0A9E00BC3DA6 /* dropbox.png */; };
+		C37B9617161A0A9E00BC3DA6 /* dropbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C37B9615161A0A9E00BC3DA6 /* dropbox@2x.png */; };
+		C37B9619161A0B1C00BC3DA6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37B9618161A0B1C00BC3DA6 /* Security.framework */; };
+		C37B961B161A0B2800BC3DA6 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37B961A161A0B2800BC3DA6 /* DropboxSDK.framework */; };
+		C37B961D161A0C6E00BC3DA6 /* ZMeshFileProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B961C161A0C6E00BC3DA6 /* ZMeshFileProtocolViewController.xib */; };
+		C37B961F161A0C7800BC3DA6 /* ZMeshLocalProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B961E161A0C7800BC3DA6 /* ZMeshLocalProtocolViewController.xib */; };
+		C37B9621161A0D4000BC3DA6 /* ZMeshLocalProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B9620161A0D4000BC3DA6 /* ZMeshLocalProtocolCell.xib */; };
+		C37B9623161A0D8D00BC3DA6 /* ZMeshFileProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B9622161A0D8D00BC3DA6 /* ZMeshFileProtocolCell.xib */; };
+		C37B962B161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B9626161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.m */; };
+		C37B962C161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B9627161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.xib */; };
+		C37B962D161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B9629161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.m */; };
+		C37B962E161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B962A161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.xib */; };
 		C3847C23132EC12D0034A892 /* zMeshApp.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C20132EC12D0034A892 /* zMeshApp.png */; };
 		C3847C24132EC12D0034A892 /* zMeshDefault-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C21132EC12D0034A892 /* zMeshDefault-Landscape.png */; };
 		C3847C25132EC12D0034A892 /* zMeshDefault-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C22132EC12D0034A892 /* zMeshDefault-Portrait.png */; };
@@ -44,11 +56,7 @@
 		C39818FF12BBE49F006C20DD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = C39818FD12BBE49F006C20DD /* save.png */; };
 		C398190012BBE49F006C20DD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39818FE12BBE49F006C20DD /* save@2x.png */; };
 		C3C4E45C12BD0A7E00F09870 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E45B12BD0A7E00F09870 /* Localizable.strings */; };
-		C3C4E47B12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E47A12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib */; };
 		C3C4E47D12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E47C12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib */; };
-		C3C4E47F12BD0BAD00F09870 /* ZMeshFileProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E47E12BD0BAD00F09870 /* ZMeshFileProtocolViewController.xib */; };
-		C3C4E48112BD0BAD00F09870 /* ZMeshLocalProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E48012BD0BAD00F09870 /* ZMeshLocalProtocolCell.xib */; };
-		C3C4E48312BD0BAD00F09870 /* ZMeshLocalProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E48212BD0BAD00F09870 /* ZMeshLocalProtocolViewController.xib */; };
 		C3C4E48512BD0BAD00F09870 /* ZMeshRenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E48412BD0BAD00F09870 /* ZMeshRenderViewController.xib */; };
 		C3C4E48712BD0BAD00F09870 /* ZMeshSaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E48612BD0BAD00F09870 /* ZMeshSaveViewController.xib */; };
 		C3C4E48912BD0BAD00F09870 /* ZMeshWebProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E48812BD0BAD00F09870 /* ZMeshWebProtocolViewController.xib */; };
@@ -99,6 +107,21 @@
 		C30B46B816186BED00D44BBB /* zMeshApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshApp@2x.png"; sourceTree = "<group>"; };
 		C30B46BA1618730A00D44BBB /* zMeshDefault-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Landscape@2x.png"; sourceTree = "<group>"; };
 		C30B46BB1618730A00D44BBB /* zMeshDefault-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Portrait@2x.png"; sourceTree = "<group>"; };
+		C37B9613161A0A6C00BC3DA6 /* ZMeshDropbBoxConf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshDropbBoxConf.h; sourceTree = "<group>"; };
+		C37B9614161A0A9E00BC3DA6 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
+		C37B9615161A0A9E00BC3DA6 /* dropbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropbox@2x.png"; sourceTree = "<group>"; };
+		C37B9618161A0B1C00BC3DA6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C37B961A161A0B2800BC3DA6 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = ../../Common/Lib/DropboxSDK.framework; sourceTree = "<group>"; };
+		C37B961C161A0C6E00BC3DA6 /* ZMeshFileProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
+		C37B961E161A0C7800BC3DA6 /* ZMeshLocalProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
+		C37B9620161A0D4000BC3DA6 /* ZMeshLocalProtocolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
+		C37B9622161A0D8D00BC3DA6 /* ZMeshFileProtocolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
+		C37B9625161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshDropBoxProtocolCell.h; sourceTree = "<group>"; };
+		C37B9626161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshDropBoxProtocolCell.m; sourceTree = "<group>"; };
+		C37B9627161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshDropBoxProtocolCell.xib; sourceTree = "<group>"; };
+		C37B9628161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshDropBoxProtocolViewController.h; sourceTree = "<group>"; };
+		C37B9629161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshDropBoxProtocolViewController.m; sourceTree = "<group>"; };
+		C37B962A161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshDropBoxProtocolViewController.xib; sourceTree = "<group>"; };
 		C3847C20132EC12D0034A892 /* zMeshApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshApp.png; sourceTree = "<group>"; };
 		C3847C21132EC12D0034A892 /* zMeshDefault-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Landscape.png"; sourceTree = "<group>"; };
 		C3847C22132EC12D0034A892 /* zMeshDefault-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Portrait.png"; sourceTree = "<group>"; };
@@ -131,16 +154,8 @@
 		C3C4E45E12BD0A8D00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3C4E48A12BD0BD700F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
 		C3C4E48B12BD0BDB00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
-		C3C4E48C12BD0BE200F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
-		C3C4E48D12BD0BE500F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
-		C3C4E48E12BD0BEC00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
-		C3C4E48F12BD0BEF00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
 		C3C4E49012BD0BF500F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
 		C3C4E49112BD0BF900F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
-		C3C4E49212BD0BFF00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
-		C3C4E49312BD0C0200F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
-		C3C4E49412BD0C0800F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
-		C3C4E49512BD0C0B00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
 		C3C4E49612BD0C1100F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
 		C3C4E49712BD0C1400F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
 		C3C4E49812BD0C1A00F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshSaveViewController.xib; sourceTree = "<group>"; };
@@ -195,19 +210,15 @@
 		C3D649A012AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
 		C3D649A212AFE7A900EDD350 /* ZMeshLocalProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolCell.h; sourceTree = "<group>"; };
 		C3D649A312AFE7A900EDD350 /* ZMeshLocalProtocolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolCell.m; sourceTree = "<group>"; };
-		C3D649A412AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshLocalProtocolCell.xib; sourceTree = "<group>"; };
 		C3D649A512AFE7A900EDD350 /* ZMeshLocalProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolViewController.h; sourceTree = "<group>"; };
 		C3D649A612AFE7A900EDD350 /* ZMeshLocalProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolViewController.m; sourceTree = "<group>"; };
-		C3D649A712AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
 		C3D649A812AFE7A900EDD350 /* ZMeshWebProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshWebProtocolViewController.h; sourceTree = "<group>"; };
 		C3D649A912AFE7A900EDD350 /* ZMeshWebProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshWebProtocolViewController.m; sourceTree = "<group>"; };
 		C3D649AA12AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
 		C3D649AC12AFE7A900EDD350 /* ZMeshFileProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshFileProtocolCell.h; sourceTree = "<group>"; };
 		C3D649AD12AFE7A900EDD350 /* ZMeshFileProtocolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshFileProtocolCell.m; sourceTree = "<group>"; };
-		C3D649AE12AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
 		C3D649AF12AFE7A900EDD350 /* ZMeshFileProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshFileProtocolViewController.h; sourceTree = "<group>"; };
 		C3D649B012AFE7A900EDD350 /* ZMeshFileProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshFileProtocolViewController.m; sourceTree = "<group>"; };
-		C3D649B112AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
 		C3D649B212AFE7A900EDD350 /* ZMeshRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshRenderViewController.h; sourceTree = "<group>"; };
 		C3D649B312AFE7A900EDD350 /* ZMeshRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshRenderViewController.m; sourceTree = "<group>"; };
 		C3D649B412AFE7A900EDD350 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
@@ -225,6 +236,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37B961B161A0B2800BC3DA6 /* DropboxSDK.framework in Frameworks */,
+				C37B9619161A0B1C00BC3DA6 /* Security.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -291,6 +304,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C37B9618161A0B1C00BC3DA6 /* Security.framework */,
+				C37B961A161A0B2800BC3DA6 /* DropboxSDK.framework */,
 				C3D648F712AFE5CB00EDD350 /* QuartzCore.framework */,
 				C3D648C412AFE3D900EDD350 /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -303,6 +318,16 @@
 				C3D6499112AFE63300EDD350 /* libz.1.1.3.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C37B9624161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolView */ = {
+			isa = PBXGroup;
+			children = (
+				C37B9625161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.h */,
+				C37B9626161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.m */,
+				C37B9627161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolCell.xib */,
+			);
+			path = ZMeshDropBoxProtocolView;
 			sourceTree = "<group>";
 		};
 		C398185712BBD8D2006C20DD /* Interface */ = {
@@ -322,6 +347,8 @@
 		C398185A12BBD8D2006C20DD /* FileProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				C37B9614161A0A9E00BC3DA6 /* dropbox.png */,
+				C37B9615161A0A9E00BC3DA6 /* dropbox@2x.png */,
 				C398185B12BBD8D2006C20DD /* folder.png */,
 				C398185C12BBD8D2006C20DD /* folder@2x.png */,
 				C398185D12BBD8D2006C20DD /* http.png */,
@@ -444,6 +471,7 @@
 				C3D6479212AFE2E600EDD350 /* ZMeshCGLView.mm */,
 				C3D6479312AFE2E600EDD350 /* ZMeshCGLViewController.h */,
 				C3D6479412AFE2E600EDD350 /* ZMeshCGLViewController.mm */,
+				C37B9613161A0A6C00BC3DA6 /* ZMeshDropbBoxConf.h */,
 			);
 			path = zMesh;
 			sourceTree = "<group>";
@@ -532,7 +560,7 @@
 				C3D649AB12AFE7A900EDD350 /* ZMeshFileProtocol */,
 				C3D649AF12AFE7A900EDD350 /* ZMeshFileProtocolViewController.h */,
 				C3D649B012AFE7A900EDD350 /* ZMeshFileProtocolViewController.m */,
-				C3C4E47E12BD0BAD00F09870 /* ZMeshFileProtocolViewController.xib */,
+				C37B961C161A0C6E00BC3DA6 /* ZMeshFileProtocolViewController.xib */,
 				C3D649B212AFE7A900EDD350 /* ZMeshRenderViewController.h */,
 				C3D649B312AFE7A900EDD350 /* ZMeshRenderViewController.m */,
 				C3C4E48412BD0BAD00F09870 /* ZMeshRenderViewController.xib */,
@@ -546,6 +574,10 @@
 		C3D6499B12AFE7A900EDD350 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				C37B9624161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolView */,
+				C37B9628161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.h */,
+				C37B9629161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.m */,
+				C37B962A161A0DDA00BC3DA6 /* ZMeshDropBoxProtocolViewController.xib */,
 				C3D6499C12AFE7A900EDD350 /* ZMeshGenericProtocolViewController.h */,
 				C3D6499D12AFE7A900EDD350 /* ZMeshGenericProtocolViewController.m */,
 				C3D6499E12AFE7A900EDD350 /* ZMeshHTTPProtocolViewController.h */,
@@ -554,7 +586,7 @@
 				C3D649A112AFE7A900EDD350 /* ZMeshLocalProtocolView */,
 				C3D649A512AFE7A900EDD350 /* ZMeshLocalProtocolViewController.h */,
 				C3D649A612AFE7A900EDD350 /* ZMeshLocalProtocolViewController.m */,
-				C3C4E48212BD0BAD00F09870 /* ZMeshLocalProtocolViewController.xib */,
+				C37B961E161A0C7800BC3DA6 /* ZMeshLocalProtocolViewController.xib */,
 				C3D649A812AFE7A900EDD350 /* ZMeshWebProtocolViewController.h */,
 				C3D649A912AFE7A900EDD350 /* ZMeshWebProtocolViewController.m */,
 				C3C4E48812BD0BAD00F09870 /* ZMeshWebProtocolViewController.xib */,
@@ -567,7 +599,7 @@
 			children = (
 				C3D649A212AFE7A900EDD350 /* ZMeshLocalProtocolCell.h */,
 				C3D649A312AFE7A900EDD350 /* ZMeshLocalProtocolCell.m */,
-				C3C4E48012BD0BAD00F09870 /* ZMeshLocalProtocolCell.xib */,
+				C37B9620161A0D4000BC3DA6 /* ZMeshLocalProtocolCell.xib */,
 			);
 			path = ZMeshLocalProtocolView;
 			sourceTree = "<group>";
@@ -577,7 +609,7 @@
 			children = (
 				C3D649AC12AFE7A900EDD350 /* ZMeshFileProtocolCell.h */,
 				C3D649AD12AFE7A900EDD350 /* ZMeshFileProtocolCell.m */,
-				C3C4E47A12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib */,
+				C37B9622161A0D8D00BC3DA6 /* ZMeshFileProtocolCell.xib */,
 			);
 			path = ZMeshFileProtocol;
 			sourceTree = "<group>";
@@ -635,11 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C4E47D12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib in Resources */,
-				C3C4E48112BD0BAD00F09870 /* ZMeshLocalProtocolCell.xib in Resources */,
-				C3C4E48312BD0BAD00F09870 /* ZMeshLocalProtocolViewController.xib in Resources */,
 				C3C4E48912BD0BAD00F09870 /* ZMeshWebProtocolViewController.xib in Resources */,
-				C3C4E47B12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib in Resources */,
-				C3C4E47F12BD0BAD00F09870 /* ZMeshFileProtocolViewController.xib in Resources */,
 				C3C4E48512BD0BAD00F09870 /* ZMeshRenderViewController.xib in Resources */,
 				C3C4E48712BD0BAD00F09870 /* ZMeshSaveViewController.xib in Resources */,
 				C3C4E45C12BD0A7E00F09870 /* Localizable.strings in Resources */,
@@ -674,6 +702,14 @@
 				C30B46BC1618730A00D44BBB /* zMeshDefault-Landscape@2x.png in Resources */,
 				C30B46BD1618730A00D44BBB /* zMeshDefault-Portrait@2x.png in Resources */,
 				C30938431618838000F3911E /* Models in Resources */,
+				C37B9616161A0A9E00BC3DA6 /* dropbox.png in Resources */,
+				C37B9617161A0A9E00BC3DA6 /* dropbox@2x.png in Resources */,
+				C37B961D161A0C6E00BC3DA6 /* ZMeshFileProtocolViewController.xib in Resources */,
+				C37B961F161A0C7800BC3DA6 /* ZMeshLocalProtocolViewController.xib in Resources */,
+				C37B9621161A0D4000BC3DA6 /* ZMeshLocalProtocolCell.xib in Resources */,
+				C37B9623161A0D8D00BC3DA6 /* ZMeshFileProtocolCell.xib in Resources */,
+				C37B962C161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolCell.xib in Resources */,
+				C37B962E161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +747,8 @@
 				C3D649CC12AFE7A900EDD350 /* ZMeshSaveViewController.m in Sources */,
 				C3D649CE12AFE7A900EDD350 /* ZMeshAppDelegate.mm in Sources */,
 				C3D649CF12AFE7A900EDD350 /* ZMeshGLViewController.mm in Sources */,
+				C37B962B161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolCell.m in Sources */,
+				C37B962D161A0DDB00BC3DA6 /* ZMeshDropBoxProtocolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,16 +765,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		C3C4E47A12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3D649AE12AFE7A900EDD350 /* English */,
-				C3C4E49212BD0BFF00F09870 /* French */,
-				C3C4E49312BD0C0200F09870 /* German */,
-			);
-			name = ZMeshFileProtocolCell.xib;
-			sourceTree = "<group>";
-		};
 		C3C4E47C12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -745,36 +773,6 @@
 				C3C4E48B12BD0BDB00F09870 /* German */,
 			);
 			name = ZMeshHTTPProtocolViewController.xib;
-			sourceTree = "<group>";
-		};
-		C3C4E47E12BD0BAD00F09870 /* ZMeshFileProtocolViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3D649B112AFE7A900EDD350 /* English */,
-				C3C4E49412BD0C0800F09870 /* French */,
-				C3C4E49512BD0C0B00F09870 /* German */,
-			);
-			name = ZMeshFileProtocolViewController.xib;
-			sourceTree = "<group>";
-		};
-		C3C4E48012BD0BAD00F09870 /* ZMeshLocalProtocolCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3D649A412AFE7A900EDD350 /* English */,
-				C3C4E48C12BD0BE200F09870 /* French */,
-				C3C4E48D12BD0BE500F09870 /* German */,
-			);
-			name = ZMeshLocalProtocolCell.xib;
-			sourceTree = "<group>";
-		};
-		C3C4E48212BD0BAD00F09870 /* ZMeshLocalProtocolViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3D649A712AFE7A900EDD350 /* English */,
-				C3C4E48E12BD0BEC00F09870 /* French */,
-				C3C4E48F12BD0BEF00F09870 /* German */,
-			);
-			name = ZMeshLocalProtocolViewController.xib;
 			sourceTree = "<group>";
 		};
 		C3C4E48412BD0BAD00F09870 /* ZMeshRenderViewController.xib */ = {
@@ -815,6 +813,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Common/Lib\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -835,6 +837,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Common/Lib\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = zMesh_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = D_IPAD;

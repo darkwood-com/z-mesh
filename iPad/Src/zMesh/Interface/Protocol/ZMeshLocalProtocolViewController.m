@@ -30,6 +30,17 @@
 @synthesize directoryContent;
 @synthesize tableView;
 
+- (id) init
+{
+	self = [super init];
+    if (self)
+	{
+        self.directoryContent = [NSMutableArray arrayWithArray:[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[ZMeshLocalProtocolViewController directoryPath]
+																												   error:nil]];
+    }
+    return self;
+}
+
 - (void) viewDidLoad
 {
 	[super viewDidLoad];
@@ -38,9 +49,6 @@
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
 																							target:self
 																							action:@selector(doEditTable:)] autorelease];
-	
-	self.directoryContent = [NSMutableArray arrayWithArray:[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[ZMeshLocalProtocolViewController directoryPath]
-																											   error:nil]];
 	
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
