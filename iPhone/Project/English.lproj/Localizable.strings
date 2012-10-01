@@ -36,3 +36,5 @@
 "protocol.web.subtitle" = "Downloaded on the Internet";
 "protocol.dropbox.title" = "Dropbox";
 "protocol.dropbox.subtitle" = "Downloaded on Dropbox";
+"protocol.dropbox.login" = "Link Dropbox";
+"protocol.dropbox.logout" = "Unlink Dropbox";

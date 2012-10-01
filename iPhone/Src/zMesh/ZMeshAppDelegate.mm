@@ -22,9 +22,12 @@
  *
  */
 
+#import <DropboxSDK/DropboxSDK.h>
+
 #import "ZMeshAppDelegate.h"
 #import "ZMeshGLViewController.h"
 #import "ZMeshLocalProtocolViewController.h"
+#import "ZMeshDropBoxProtocolViewController.h"
 
 @implementation ZMeshRotateViewController
 
@@ -100,6 +103,22 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Handle any foreground procedures not related to animation here.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+	if ([[DBSession sharedSession] handleOpenURL:url])
+	{
+		UIViewController* top = [viewController topViewController];
+		if([top isKindOfClass:[ZMeshDropBoxProtocolViewController class]])
+		{
+			[(ZMeshDropBoxProtocolViewController*)top update];
+		}
+		
+		return YES;
+	}
+	
+	return NO;
 }
 
 - (void)dealloc
