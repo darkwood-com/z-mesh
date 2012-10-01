@@ -96,7 +96,7 @@ enum {
 	
 	[super loadView];
 	
-	[self openMeshType:@"stl" andData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cube" ofType:@"stl"]]];
+	[self openMeshType:@"stl" andData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Models/cube" ofType:@"stl"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

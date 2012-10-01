@@ -24,6 +24,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface ZMeshRotateViewController : UINavigationController {
+	
+}
+
+@end
+
 @interface ZMeshAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow* window;
     UINavigationController* viewController;

@@ -23,8 +23,8 @@
  */
 
 #import "ZMeshAppDelegate.h"
-#import "ZMeshRotateViewController.h"
 #import "ZMeshGLViewController.h"
+#import "ZMeshLocalProtocolViewController.h"
 
 @implementation ZMeshRotateViewController
 
@@ -42,6 +42,28 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
+	//copy sample files at first app launch
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	int launchCount = [defaults integerForKey:@"launchCount" ] + 1;
+	[defaults setInteger:launchCount forKey:@"launchCount"];
+	[defaults synchronize];
+	
+	if(launchCount == 1 || true)
+	{
+		NSFileManager* fileManager = [NSFileManager defaultManager];
+        NSError* error;
+        NSString* documentFolderPath = [ZMeshLocalProtocolViewController directoryPath];
+        NSString* resourceFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Models"];
+		
+		NSArray* files = [fileManager contentsOfDirectoryAtPath:resourceFolderPath error:nil];
+		for (NSString* file in files) {
+			NSString* fileFrom = [resourceFolderPath stringByAppendingPathComponent:file];
+			NSString* fileTo = [documentFolderPath stringByAppendingPathComponent:file];
+			
+			[fileManager copyItemAtPath:fileFrom toPath:fileTo error:&error];
+		}
+	}
+	
 	CGRect screenBounds = [[UIScreen mainScreen] bounds];
 	self.window = [[UIWindow alloc] initWithFrame:screenBounds];
 	
@@ -51,8 +73,6 @@
 	[self.viewController setToolbarHidden:NO animated:NO];
 	
 	self.window.rootViewController = self.viewController;
-
-	[self.window addSubview:self.viewController.view];
 	
 	[self.window makeKeyAndVisible];
 }

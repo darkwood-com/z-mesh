@@ -25,6 +25,33 @@
 }
 @end
 
+
+// Stop clang complaining about undeclared selectors
+@interface ASIHTTPRequestTests ()
+- (void)runCancelTest;
+- (void)performDelegateMethodsTest;
+- (void)requestStarted:(ASIHTTPRequest *)request;
+- (void)requestFinished:(ASIHTTPRequest *)request;
+- (void)requestFailed:(ASIHTTPRequest *)request;
+- (void)delegateTestStarted:(ASIHTTPRequest *)request;
+- (void)delegateTestResponseHeaders:(ASIHTTPRequest *)request;
+- (void)delegateTestFinished:(ASIHTTPRequest *)request;
+- (void)delegateTestFailed:(ASIHTTPRequest *)request;
+- (void)runRemoveUploadProgressTest;
+- (void)runRedirectedResume;
+- (void)performDownloadProgressTest;
+- (void)theTestRequest:(ASIHTTPRequest *)request didReceiveData:(NSData *)data;
+- (void)theTestRequestFinished:(ASIHTTPRequest *)request;
+- (void)performUploadProgressTest;
+- (void)performPostBodyStreamedFromDiskTest;
+- (void)performPartialFetchTest;
+- (void)asyncFail:(ASIHTTPRequest *)request;
+- (void)asyncSuccess:(ASIHTTPRequest *)request;
+- (void)request:(ASIHTTPRequest *)request isGoingToRedirectToURL:(NSURL *)url;
+- (void)redirectURLTestFailed:(ASIHTTPRequest *)request;
+- (void)redirectURLTestSucceeded:(ASIHTTPRequest *)request;
+@end
+
 @implementation ASIHTTPRequestTests
 
 - (void)testBasicDownload
@@ -63,6 +90,14 @@
 	[request startSynchronous];
 	success = [[request error] code] == ASIUnableToCreateRequestErrorType;
 	GHAssertTrue(success,@"Failed to generate an error for a bad host");
+}
+
+- (void)testBase64Encode
+{
+	NSData *data = [@"Hello, world" dataUsingEncoding:NSUTF8StringEncoding];
+	NSString *base64 = [ASIHTTPRequest base64forData:data];
+	BOOL success = [base64 isEqualToString:@"SGVsbG8sIHdvcmxk"];
+	GHAssertTrue(success,@"Failed to encode data using base64 data correctly");
 }
 
 - (void)testCancel
@@ -353,14 +388,41 @@
 		BOOL success = [[request responseString] isEqualToString:[ASIHTTPRequest defaultUserAgentString]];
 		GHAssertTrue(success,@"Failed to set the correct user agent");
 	}
-	
-	// Now test specifying a custom user agent
+
+	NSString *customUserAgent = @"Ferdinand Fuzzworth's Magic Tent of Mystery";
+
+	// Test specifying a custom user-agent for a single request
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/user-agent"]];
-	[request addRequestHeader:@"User-Agent" value:@"Ferdinand Fuzzworth's Magic Tent of Mystery"];
+	[request addRequestHeader:@"User-Agent" value:customUserAgent];
 	[request startSynchronous];
-	BOOL success = [[request responseString] isEqualToString:@"Ferdinand Fuzzworth's Magic Tent of Mystery"];
-	GHAssertTrue(success,@"Failed to set the correct user agent");
-	
+	BOOL success = [[request responseString] isEqualToString:customUserAgent];
+	GHAssertTrue(success,@"Failed to set the correct user-agent for a single request");
+
+	// Test again using userAgent
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/user-agent"]];
+	[request setUserAgentString:customUserAgent];
+	[request startSynchronous];
+	success = [[request responseString] isEqualToString:customUserAgent];
+	GHAssertTrue(success,@"Failed to set the correct user-agent for a single request");
+
+	// Test again to ensure user-agent not reused
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/user-agent"]];
+	[request startSynchronous];
+	success = ![[request responseString] isEqualToString:customUserAgent];
+	GHAssertTrue(success,@"Re-used a user agent when we shouldn't have done so");
+
+	// Test setting a custom default user-agent string
+	[ASIHTTPRequest setDefaultUserAgentString:customUserAgent];
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/user-agent"]];
+	[request startSynchronous];
+	success = [[request responseString] isEqualToString:customUserAgent];
+	GHAssertTrue(success,@"Failed to set the correct user-agent when using a custom default");
+
+	[ASIHTTPRequest setDefaultUserAgentString:nil];
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/user-agent"]];
+	[request startSynchronous];
+	success = ![[request responseString] isEqualToString:customUserAgent];
+	GHAssertTrue(success,@"Failed to clear a custom default user-agent");
 }
 
 - (void)testAutomaticRedirection
@@ -971,6 +1033,30 @@
 	
 }
 
+- (void)testPreserveResponseWhenDownloadComplete
+{
+	NSURL *url = [NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/basic-authentication"];
+	ASIHTTPRequest *request;
+	BOOL success;
+
+	request = [ASIHTTPRequest requestWithURL:url];
+	[request startSynchronous];
+
+	success = ([[request responseString] length]);
+	GHAssertTrue(success,@"Request removed the response body when we encountered an error, even though the download was complete");
+
+	NSString *downloadPath = [[self filePathForTemporaryTestFiles] stringByAppendingPathComponent:@"test.txt"];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:downloadPath]) {
+		[[NSFileManager defaultManager] removeItemAtPath:downloadPath error:NULL];
+	}
+
+	request = [ASIHTTPRequest requestWithURL:url];
+	[request setDownloadDestinationPath:downloadPath];
+	[request startSynchronous];
+
+	success = ([[[NSFileManager defaultManager] attributesOfItemAtPath:downloadPath error:NULL] fileSize]);
+	GHAssertTrue(success,@"Request removed or failed to copy the response to downloadDestinationPath");
+}
 
 - (void)testBasicAuthentication
 {
@@ -988,7 +1074,7 @@
 	[request startSynchronous];
 	success = [[request error] code] == ASIAuthenticationErrorType;
 	GHAssertTrue(success,@"Failed to generate permission denied error with no credentials");
-	
+
 	// Test wrong credentials supplied
 	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
 	[request setUseKeychainPersistence:NO];
@@ -1019,6 +1105,16 @@
 
 	// Ensure credentials stored in the session are reused
 	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
+	[request setUseSessionPersistence:YES];
+	[request setUseKeychainPersistence:NO];
+	[request startSynchronous];
+	err = [request error];
+	GHAssertNil(err,@"Failed to reuse credentials");
+	
+	// Ensure new credentials are used in place of those in the session
+	request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/basic-authentication-new-credentials"]] autorelease];
+	[request setUsername:@"secret_username_2"];
+	[request setPassword:@"secret_password_2"];
 	[request setUseSessionPersistence:YES];
 	[request setUseKeychainPersistence:NO];
 	[request startSynchronous];
@@ -1056,7 +1152,7 @@
 	[request setUseSessionPersistence:YES];
 	[request startSynchronous];
 	success = [request authenticationRetryCount] == 0;
-	GHAssertTrue(success,@"Didn't supply credentials before being asked for them when talking to the same server with shouldPresentCredentialsBeforeChallenge == YES");	
+	GHAssertTrue(success,@"Didn't supply credentials before being asked for them when talking to the same server with shouldPresentCredentialsBeforeChallenge == YES");
 	
 	// Ensure credentials stored in the session were not presented to the server before it asked for them
 	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
@@ -1068,15 +1164,26 @@
 	
 	[ASIHTTPRequest clearSession];
 	
-	// Test credentials set on the request are sent before the server asks for them
+	// Test credentials set on the request are not sent before the server asks for them unless they are cached credentials from a previous request to this server
 	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
 	[request setUseSessionPersistence:NO];
 	[request setUsername:@"secret_username"];
 	[request setPassword:@"secret_password"];
 	[request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request startSynchronous];
+	BOOL fail = [request authenticationRetryCount] == 0;
+	GHAssertFalse(fail,@"Sent Basic credentials even though request did not have kCFHTTPAuthenticationSchemeBasic set as authenticationScheme.");
+
+	// Test basic credentials set on the request are sent before the server asks for them if we've explictly set the authentication scheme to basic
+	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
+	[request setUseSessionPersistence:NO];
+	[request setUsername:@"secret_username"];
+	[request setPassword:@"secret_password"];
+	[request setShouldPresentCredentialsBeforeChallenge:YES];
+	[request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+	[request startSynchronous];
 	success = [request authenticationRetryCount] == 0;
-	GHAssertTrue(success,@"Didn't supply credentials before being asked for them, even though they were set on the request and shouldPresentCredentialsBeforeChallenge == YES");	
+	GHAssertTrue(success,@"Didn't supply credentials before being asked for them, even though they were set on the request and shouldPresentCredentialsBeforeChallenge == YES");
 	
 	// Test credentials set on the request aren't sent before the server asks for them
 	request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
@@ -1316,7 +1423,7 @@
 	GHAssertNotNil([request error],@"Failed to generate an error for a self-signed certificate (Will fail on the second run in the same session!)");		
 	
 	// Just for testing the request generated a custom error description - don't do this! You should look at the domain / code of the underlyingError in your own programs.
-	BOOL success = ([[[request error] localizedDescription] isEqualToString:@"A connection failure occurred: SSL problem (possibly a bad/expired/self-signed certificate)"]);
+	BOOL success = ([[[request error] localizedDescription] rangeOfString:@"SSL problem"].location != NSNotFound);
 	GHAssertTrue(success,@"Generated the wrong error for a self signed cert");
 	
 	// Turn off certificate validation, and try again
@@ -1351,7 +1458,7 @@
 {
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/redirect_to_new_domain"]];
 	[request startSynchronous];
-	BOOL success = [[[request url] absoluteString] isEqualToString:@"http://www.apple.com/"];
+	BOOL success = [[[[request url] absoluteString] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"/"]] isEqualToString:@"http://www.apple.com"];
 	GHAssertTrue(success,@"Failed to redirect to a different domain");		
 }
 
@@ -1488,28 +1595,28 @@
 - (void)testAsynchronous
 {
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/first"]];
-	[request setUserInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"RequestNumber"]];
+	[request setTag:1];
 	[request setDidFailSelector:@selector(asyncFail:)];
 	[request setDidFinishSelector:@selector(asyncSuccess:)];
 	[request setDelegate:self];
 	[request startAsynchronous];
 	
 	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/second"]];
-	[request setUserInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:@"RequestNumber"]];
+	[request setTag:2];
 	[request setDidFailSelector:@selector(asyncFail:)];
 	[request setDidFinishSelector:@selector(asyncSuccess:)];
 	[request setDelegate:self];
 	[request startAsynchronous];
 	
 	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ASIHTTPRequest/tests/third"]];
-	[request setUserInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:3] forKey:@"RequestNumber"]];
+	[request setTag:3];
 	[request setDidFailSelector:@selector(asyncFail:)];
 	[request setDidFinishSelector:@selector(asyncSuccess:)];
 	[request setDelegate:self];
 	[request startAsynchronous];	
 	
 	request = [ASIHTTPRequest requestWithURL:nil];
-	[request setUserInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:4] forKey:@"RequestNumber"]];
+	[request setTag:4];
 	[request setDidFailSelector:@selector(asyncFail:)];
 	[request setDidFinishSelector:@selector(asyncSuccess:)];
 	[request setDelegate:self];
@@ -1519,18 +1626,16 @@
 
 - (void)asyncFail:(ASIHTTPRequest *)request
 {
-	int requestNumber = [[[request userInfo] objectForKey:@"RequestNumber"] intValue];
-	BOOL success = (requestNumber == 4);
+	BOOL success = ([request tag] == 4);
 	GHAssertTrue(success,@"Wrong request failed");
 }
 
 - (void)asyncSuccess:(ASIHTTPRequest *)request
 {
-	int requestNumber = [[[request userInfo] objectForKey:@"RequestNumber"] intValue];
-	BOOL success = (requestNumber != 4);
+	BOOL success = ([request tag] != 4);
 	GHAssertTrue(success,@"Request succeeded when it should have failed");
 	
-	switch (requestNumber) {
+	switch ([request tag]) {
 		case 1:
 			success = [[request responseString] isEqualToString:@"This is the expected content for the first string"];
 			break;
@@ -1619,29 +1724,62 @@
 	
 }
 
-- (void)testPersistentConnectionTimeout
+- (void)testPersistentConnections
 {
+	// allseeing-i.com is configured to keep persistent connections alive for 2 seconds
+
+	// Ensure we parse a keep-alive header
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
-	
+
 	BOOL success = ([request persistentConnectionTimeoutSeconds] == 60);
 	GHAssertTrue(success,@"Request failed to default to 60 seconds for connection timeout");
-	
+
 	[request startSynchronous];
-	
+
 	NSNumber *connectionId = [request connectionID];
-	
+
 	success = ([request persistentConnectionTimeoutSeconds] == 2);
 	GHAssertTrue(success,@"Request failed to use time out set by server");
-	
+
 	// Wait 3 seconds - connection should have timed out
 	sleep(3);
-	
+
 	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
 	[request startSynchronous];
-	
+
 	success = ([[request connectionID] intValue] != [connectionId intValue]);
 	GHAssertTrue(success,@"Reused a connection that should have timed out");
-	
+
+	// Ensure persistent connections are turned off by default with POST/PUT and/or a request body
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
+	[request appendPostData:[@"Foo" dataUsingEncoding:NSUTF8StringEncoding]];
+	[request startSynchronous];
+
+	success = ![request shouldAttemptPersistentConnection];
+	GHAssertTrue(success,@"Used a persistent connection with a body");
+
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
+	[request setRequestMethod:@"PUT"];
+	[request startSynchronous];
+
+	success = ![request shouldAttemptPersistentConnection];
+	GHAssertTrue(success,@"Used a persistent connection with PUT");
+
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
+	[request setRequestMethod:@"POST"];
+	[request startSynchronous];
+
+	success = ![request shouldAttemptPersistentConnection];
+	GHAssertTrue(success,@"Used a persistent connection with POST");
+
+	// Ensure we can force a persistent connection
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
+	[request setRequestMethod:@"POST"];
+	[request setShouldAttemptPersistentConnection:YES];
+	[request startSynchronous];
+
+	success = [request shouldAttemptPersistentConnection];
+	GHAssertTrue(success,@"Failed to use a persistent connection");
 }
 
 - (void)testRemoveUploadProgress

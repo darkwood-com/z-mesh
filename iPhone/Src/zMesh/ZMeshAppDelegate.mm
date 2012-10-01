@@ -24,6 +24,16 @@
 
 #import "ZMeshAppDelegate.h"
 #import "ZMeshGLViewController.h"
+#import "ZMeshLocalProtocolViewController.h"
+
+@implementation ZMeshRotateViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+@end
 
 @implementation ZMeshAppDelegate
 
@@ -32,16 +42,37 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
+	//copy sample files at first app launch
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	int launchCount = [defaults integerForKey:@"launchCount" ] + 1;
+	[defaults setInteger:launchCount forKey:@"launchCount"];
+	[defaults synchronize];
+	
+	if(launchCount == 1 || true)
+	{
+		NSFileManager* fileManager = [NSFileManager defaultManager];
+        NSError* error;
+        NSString* documentFolderPath = [ZMeshLocalProtocolViewController directoryPath];
+        NSString* resourceFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Models"];
+		
+		NSArray* files = [fileManager contentsOfDirectoryAtPath:resourceFolderPath error:nil];
+		for (NSString* file in files) {
+			NSString* fileFrom = [resourceFolderPath stringByAppendingPathComponent:file];
+			NSString* fileTo = [documentFolderPath stringByAppendingPathComponent:file];
+			
+			[fileManager copyItemAtPath:fileFrom toPath:fileTo error:&error];
+		}
+	}
+	
 	CGRect screenBounds = [[UIScreen mainScreen] bounds];
 	self.window = [[UIWindow alloc] initWithFrame:screenBounds];
 	
-	ZMeshGLViewController* rootViewController = [[[ZMeshGLViewController alloc] init] autorelease];
-	
-	self.viewController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+	UIViewController* rootViewController = [[[ZMeshGLViewController alloc] init] autorelease];
+	self.viewController = [[[ZMeshRotateViewController alloc] initWithRootViewController:rootViewController] autorelease];
 	[self.viewController setNavigationBarHidden:YES animated:NO];
 	[self.viewController setToolbarHidden:NO animated:NO];
 
-	[self.window addSubview:self.viewController.view];
+	self.window.rootViewController = self.viewController;
 	
 	[self.window makeKeyAndVisible];
 }

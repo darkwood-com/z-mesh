@@ -96,7 +96,7 @@ enum {
 	
 	[super loadView];
 	
-	[self openMeshType:@"stl" andData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cube" ofType:@"stl"]]];
+	[self openMeshType:@"stl" andData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Models/cube" ofType:@"stl"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -154,6 +154,13 @@ enum {
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	
+	[self reshape];
 }
 
 - (void)addMesh:(id)sender

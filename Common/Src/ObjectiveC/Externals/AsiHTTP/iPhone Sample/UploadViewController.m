@@ -10,6 +10,12 @@
 #import "ASIFormDataRequest.h"
 #import "InfoCell.h"
 
+// Private stuff
+@interface UploadViewController ()
+- (void)uploadFailed:(ASIHTTPRequest *)theRequest;
+- (void)uploadFinished:(ASIHTTPRequest *)theRequest;
+@end
+
 @implementation UploadViewController
 
 - (IBAction)performLargeUpload:(id)sender
@@ -37,7 +43,7 @@
 	//Add the file 8 times to the request, for a total request size around 2MB
 	int i;
 	for (i=0; i<8; i++) {
-		[request setFile:path forKey:[NSString stringWithFormat:@"file-%hi",i]];
+		[request setFile:path forKey:[NSString stringWithFormat:@"file-%i",i]];
 	}
 	
 	[request startAsynchronous];
@@ -64,14 +70,14 @@
         [[UIApplication sharedApplication] cancelAllLocalNotifications];
 
     // Create a new notification
-    UILocalNotification* alarm = [[[UILocalNotification alloc] init] autorelease];
-    if (alarm) {
-		[alarm setFireDate:[NSDate date]];
-		[alarm setTimeZone:[NSTimeZone defaultTimeZone]];
-		[alarm setRepeatInterval:0];
-		[alarm setSoundName:@"alarmsound.caf"];
-		[alarm setAlertBody:@"Boom!\r\n\r\nUpload is finished!"];
-        [[UIApplication sharedApplication] scheduleLocalNotification:alarm];
+    UILocalNotification *notification = [[[UILocalNotification alloc] init] autorelease];
+    if (notification) {
+		[notification setFireDate:[NSDate date]];
+		[notification setTimeZone:[NSTimeZone defaultTimeZone]];
+		[notification setRepeatInterval:0];
+		[notification setSoundName:@"alarmsound.caf"];
+		[notification setAlertBody:@"Boom!\r\n\r\nUpload is finished!"];
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
 	#endif
 }

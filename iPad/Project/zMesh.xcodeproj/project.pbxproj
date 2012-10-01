@@ -11,6 +11,11 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		C30938431618838000F3911E /* Models in Resources */ = {isa = PBXBuildFile; fileRef = C30938421618838000F3911E /* Models */; };
+		C30B46B7161862A200D44BBB /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C30B46B6161862A200D44BBB /* libxml2.2.dylib */; };
+		C30B46B916186BED00D44BBB /* zMeshApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46B816186BED00D44BBB /* zMeshApp@2x.png */; };
+		C30B46BC1618730A00D44BBB /* zMeshDefault-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46BA1618730A00D44BBB /* zMeshDefault-Landscape@2x.png */; };
+		C30B46BD1618730A00D44BBB /* zMeshDefault-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C30B46BB1618730A00D44BBB /* zMeshDefault-Portrait@2x.png */; };
 		C3847C23132EC12D0034A892 /* zMeshApp.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C20132EC12D0034A892 /* zMeshApp.png */; };
 		C3847C24132EC12D0034A892 /* zMeshDefault-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C21132EC12D0034A892 /* zMeshDefault-Landscape.png */; };
 		C3847C25132EC12D0034A892 /* zMeshDefault-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C3847C22132EC12D0034A892 /* zMeshDefault-Portrait.png */; };
@@ -38,7 +43,6 @@
 		C398188612BBD8D2006C20DD /* wire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398187012BBD8D2006C20DD /* wire@2x.png */; };
 		C39818FF12BBE49F006C20DD /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = C39818FD12BBE49F006C20DD /* save.png */; };
 		C398190012BBE49F006C20DD /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C39818FE12BBE49F006C20DD /* save@2x.png */; };
-		C3C4E3EB12BD074900F09870 /* cube.stl in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E3DF12BD074900F09870 /* cube.stl */; };
 		C3C4E45C12BD0A7E00F09870 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E45B12BD0A7E00F09870 /* Localizable.strings */; };
 		C3C4E47B12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E47A12BD0BAD00F09870 /* ZMeshFileProtocolCell.xib */; };
 		C3C4E47D12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C4E47C12BD0BAD00F09870 /* ZMeshHTTPProtocolViewController.xib */; };
@@ -61,14 +65,12 @@
 		C3D6489812AFE37700EDD350 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6485012AFE37600EDD350 /* ASIHTTPRequest.m */; };
 		C3D6489912AFE37700EDD350 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6485412AFE37600EDD350 /* ASIInputStream.m */; };
 		C3D6489A12AFE37700EDD350 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6485612AFE37600EDD350 /* ASINetworkQueue.m */; };
-		C3D6489B12AFE37700EDD350 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6485912AFE37600EDD350 /* ASIWebPageRequest.m */; };
 		C3D648C512AFE3D900EDD350 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D648C412AFE3D900EDD350 /* OpenGLES.framework */; };
 		C3D648EE12AFE53D00EDD350 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D648ED12AFE53D00EDD350 /* Reachability.m */; };
 		C3D648F812AFE5CB00EDD350 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D648F712AFE5CB00EDD350 /* QuartzCore.framework */; };
 		C3D6491012AFE5E300EDD350 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D6490F12AFE5E300EDD350 /* CFNetwork.framework */; };
 		C3D6497412AFE5F400EDD350 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D6497312AFE5F400EDD350 /* MobileCoreServices.framework */; };
 		C3D6497C12AFE60500EDD350 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D6497B12AFE60500EDD350 /* SystemConfiguration.framework */; };
-		C3D6499012AFE62300EDD350 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D6498F12AFE62300EDD350 /* libxml2.2.7.3.dylib */; };
 		C3D6499212AFE63300EDD350 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D6499112AFE63300EDD350 /* libz.1.1.3.dylib */; };
 		C3D649BC12AFE7A900EDD350 /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3D6499912AFE7A900EDD350 /* EAGLView.mm */; };
 		C3D649BD12AFE7A900EDD350 /* ZMeshGenericProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6499D12AFE7A900EDD350 /* ZMeshGenericProtocolViewController.m */; };
@@ -92,6 +94,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* zMesh_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMesh_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* zMesh-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "zMesh-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C30938421618838000F3911E /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../../Common/Bin/Data/Models; sourceTree = "<group>"; };
+		C30B46B6161862A200D44BBB /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		C30B46B816186BED00D44BBB /* zMeshApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshApp@2x.png"; sourceTree = "<group>"; };
+		C30B46BA1618730A00D44BBB /* zMeshDefault-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Landscape@2x.png"; sourceTree = "<group>"; };
+		C30B46BB1618730A00D44BBB /* zMeshDefault-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Portrait@2x.png"; sourceTree = "<group>"; };
 		C3847C20132EC12D0034A892 /* zMeshApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshApp.png; sourceTree = "<group>"; };
 		C3847C21132EC12D0034A892 /* zMeshDefault-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Landscape.png"; sourceTree = "<group>"; };
 		C3847C22132EC12D0034A892 /* zMeshDefault-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-Portrait.png"; sourceTree = "<group>"; };
@@ -120,7 +127,6 @@
 		C398187012BBD8D2006C20DD /* wire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wire@2x.png"; sourceTree = "<group>"; };
 		C39818FD12BBE49F006C20DD /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		C39818FE12BBE49F006C20DD /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
-		C3C4E3DF12BD074900F09870 /* cube.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = cube.stl; sourceTree = "<group>"; };
 		C3C4E45D12BD0A8900F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3C4E45E12BD0A8D00F09870 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3C4E48A12BD0BD700F09870 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
@@ -172,8 +178,6 @@
 		C3D6485512AFE37600EDD350 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
 		C3D6485612AFE37600EDD350 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		C3D6485712AFE37600EDD350 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
-		C3D6485812AFE37600EDD350 /* ASIWebPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIWebPageRequest.h; sourceTree = "<group>"; };
-		C3D6485912AFE37600EDD350 /* ASIWebPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIWebPageRequest.m; sourceTree = "<group>"; };
 		C3D648C412AFE3D900EDD350 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C3D648EC12AFE53D00EDD350 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C3D648ED12AFE53D00EDD350 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -181,7 +185,6 @@
 		C3D6490F12AFE5E300EDD350 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C3D6497312AFE5F400EDD350 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C3D6497B12AFE60500EDD350 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C3D6498F12AFE62300EDD350 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		C3D6499112AFE63300EDD350 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		C3D6499812AFE7A900EDD350 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		C3D6499912AFE7A900EDD350 /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
@@ -230,7 +233,7 @@
 				C3D6491012AFE5E300EDD350 /* CFNetwork.framework in Frameworks */,
 				C3D6497412AFE5F400EDD350 /* MobileCoreServices.framework in Frameworks */,
 				C3D6497C12AFE60500EDD350 /* SystemConfiguration.framework in Frameworks */,
-				C3D6499012AFE62300EDD350 /* libxml2.2.7.3.dylib in Frameworks */,
+				C30B46B7161862A200D44BBB /* libxml2.2.dylib in Frameworks */,
 				C3D6499212AFE63300EDD350 /* libz.1.1.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,13 +274,16 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C30938421618838000F3911E /* Models */,
 				8D1107310486CEB800E47090 /* zMesh-Info.plist */,
 				C3C4E45B12BD0A7E00F09870 /* Localizable.strings */,
 				C3847C20132EC12D0034A892 /* zMeshApp.png */,
+				C30B46B816186BED00D44BBB /* zMeshApp@2x.png */,
 				C3847C21132EC12D0034A892 /* zMeshDefault-Landscape.png */,
+				C30B46BA1618730A00D44BBB /* zMeshDefault-Landscape@2x.png */,
 				C3847C22132EC12D0034A892 /* zMeshDefault-Portrait.png */,
+				C30B46BB1618730A00D44BBB /* zMeshDefault-Portrait@2x.png */,
 				C398185712BBD8D2006C20DD /* Interface */,
-				C3C4E3D712BD074900F09870 /* Models */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -293,7 +299,7 @@
 				C3D6497312AFE5F400EDD350 /* MobileCoreServices.framework */,
 				C3D6497B12AFE60500EDD350 /* SystemConfiguration.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
-				C3D6498F12AFE62300EDD350 /* libxml2.2.7.3.dylib */,
+				C30B46B6161862A200D44BBB /* libxml2.2.dylib */,
 				C3D6499112AFE63300EDD350 /* libz.1.1.3.dylib */,
 			);
 			name = Frameworks;
@@ -353,23 +359,6 @@
 				C398187012BBD8D2006C20DD /* wire@2x.png */,
 			);
 			path = Render;
-			sourceTree = "<group>";
-		};
-		C3C4E3D712BD074900F09870 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C3C4E3DC12BD074900F09870 /* stl */,
-			);
-			name = Models;
-			path = ../../Common/Bin/Data/Models;
-			sourceTree = SOURCE_ROOT;
-		};
-		C3C4E3DC12BD074900F09870 /* stl */ = {
-			isa = PBXGroup;
-			children = (
-				C3C4E3DF12BD074900F09870 /* cube.stl */,
-			);
-			path = stl;
 			sourceTree = "<group>";
 		};
 		C3D6468A12AFE2E600EDD350 /* Src - Common */ = {
@@ -490,8 +479,6 @@
 				C3D6485512AFE37600EDD350 /* ASINetworkQueue.h */,
 				C3D6485612AFE37600EDD350 /* ASINetworkQueue.m */,
 				C3D6485712AFE37600EDD350 /* ASIProgressDelegate.h */,
-				C3D6485812AFE37600EDD350 /* ASIWebPageRequest.h */,
-				C3D6485912AFE37600EDD350 /* ASIWebPageRequest.m */,
 			);
 			name = AsiHTTP;
 			path = AsiHTTP/Classes;
@@ -621,7 +608,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "zMesh" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -680,10 +667,13 @@
 				C398188612BBD8D2006C20DD /* wire@2x.png in Resources */,
 				C39818FF12BBE49F006C20DD /* save.png in Resources */,
 				C398190012BBE49F006C20DD /* save@2x.png in Resources */,
-				C3C4E3EB12BD074900F09870 /* cube.stl in Resources */,
 				C3847C23132EC12D0034A892 /* zMeshApp.png in Resources */,
 				C3847C24132EC12D0034A892 /* zMeshDefault-Landscape.png in Resources */,
 				C3847C25132EC12D0034A892 /* zMeshDefault-Portrait.png in Resources */,
+				C30B46B916186BED00D44BBB /* zMeshApp@2x.png in Resources */,
+				C30B46BC1618730A00D44BBB /* zMeshDefault-Landscape@2x.png in Resources */,
+				C30B46BD1618730A00D44BBB /* zMeshDefault-Portrait@2x.png in Resources */,
+				C30938431618838000F3911E /* Models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +698,6 @@
 				C3D6489812AFE37700EDD350 /* ASIHTTPRequest.m in Sources */,
 				C3D6489912AFE37700EDD350 /* ASIInputStream.m in Sources */,
 				C3D6489A12AFE37700EDD350 /* ASINetworkQueue.m in Sources */,
-				C3D6489B12AFE37700EDD350 /* ASIWebPageRequest.m in Sources */,
 				C3D648EE12AFE53D00EDD350 /* Reachability.m in Sources */,
 				C3D649BC12AFE7A900EDD350 /* EAGLView.mm in Sources */,
 				C3D649BD12AFE7A900EDD350 /* ZMeshGenericProtocolViewController.m in Sources */,
@@ -836,6 +825,7 @@
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
 				);
 				INFOPLIST_FILE = "zMesh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = zMesh;
 			};
 			name = Debug;
@@ -853,6 +843,7 @@
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
 				);
 				INFOPLIST_FILE = "zMesh-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = zMesh;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -868,7 +859,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -884,7 +875,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;

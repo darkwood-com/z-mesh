@@ -12,13 +12,12 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		C305ACA612BCFF3D00038090 /* cube.stl in Resources */ = {isa = PBXBuildFile; fileRef = C305AC9A12BCFF3D00038090 /* cube.stl */; };
 		C309203712A1ADA500CC6733 /* ZMeshRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C309203512A1ADA500CC6733 /* ZMeshRenderViewController.m */; };
 		C30A96171296BD9A00867D18 /* ZMeshSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A96151296BD9A00867D18 /* ZMeshSaveViewController.m */; };
+		C30B46F616187E2300D44BBB /* Models in Resources */ = {isa = PBXBuildFile; fileRef = C30B46F516187E2300D44BBB /* Models */; };
 		C33457C612958CC700CB5270 /* ZMeshWebProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */; };
 		C34257B9132D2CF9006E4AD4 /* zMeshDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */; };
 		C34257BA132D2CF9006E4AD4 /* zMeshDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */; };
-		C36689D91293DCCA00EF1FD7 /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */; };
 		C3668A211293DDB500EF1FD7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A201293DDB500EF1FD7 /* CFNetwork.framework */; };
 		C3668A361293DDF600EF1FD7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */; };
 		C3668A411293DE0600EF1FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */; };
@@ -35,13 +34,14 @@
 		C3668E0F129423C700EF1FD7 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC7129423C700EF1FD7 /* ASIHTTPRequest.m */; };
 		C3668E10129423C700EF1FD7 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCB129423C700EF1FD7 /* ASIInputStream.m */; };
 		C3668E11129423C700EF1FD7 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */; };
-		C3668E12129423C700EF1FD7 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */; };
 		C3762297129A63D500E08E0C /* ZMeshLocalProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */; };
 		C37E5FAD1292D66800A685DF /* ZMeshAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C37E5FAB1292D66800A685DF /* ZMeshAppDelegate.mm */; };
 		C37EFF8714AD2CAC00199352 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C37EFF8614AD2CAC00199352 /* libz.1.1.3.dylib */; };
 		C38E131F12951CF00064F532 /* ZMeshCGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E131E12951CF00064F532 /* ZMeshCGLViewController.mm */; };
 		C38E132212951D280064F532 /* ZMeshGLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E132112951D280064F532 /* ZMeshGLViewController.mm */; };
 		C38E1355129520870064F532 /* ZMeshCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C38E1354129520870064F532 /* ZMeshCGLView.mm */; };
+		C3945F6B16184A6F00B449FB /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3945F6A16184A6F00B449FB /* libxml2.2.dylib */; };
+		C3945F6D1618563900B449FB /* zMeshDefault-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3945F6C1618563900B449FB /* zMeshDefault-568h@2x.png */; };
 		C398183612BBD698006C20DD /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182C12BBD698006C20DD /* box.png */; };
 		C398183712BBD698006C20DD /* box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182D12BBD698006C20DD /* box@2x.png */; };
 		C398183812BBD698006C20DD /* flat.png in Resources */ = {isa = PBXBuildFile; fileRef = C398182E12BBD698006C20DD /* flat.png */; };
@@ -94,7 +94,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* zMesh_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMesh_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* zMesh-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "zMesh-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C305AC9A12BCFF3D00038090 /* cube.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = cube.stl; sourceTree = "<group>"; };
 		C309203412A1ADA500CC6733 /* ZMeshRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshRenderViewController.h; sourceTree = "<group>"; };
 		C309203512A1ADA500CC6733 /* ZMeshRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshRenderViewController.m; sourceTree = "<group>"; };
 		C309203612A1ADA500CC6733 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshRenderViewController.xib; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		C30A96141296BD9A00867D18 /* ZMeshSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshSaveViewController.h; sourceTree = "<group>"; };
 		C30A96151296BD9A00867D18 /* ZMeshSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshSaveViewController.m; sourceTree = "<group>"; };
 		C30A96161296BD9A00867D18 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshSaveViewController.xib; sourceTree = "<group>"; };
+		C30B46F516187E2300D44BBB /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../../Common/Bin/Data/Models; sourceTree = "<group>"; };
 		C3209EBC129518AC004231CD /* ZMeshApple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshApple.h; sourceTree = "<group>"; };
 		C334579D1295896200CB5270 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshHTTPProtocolViewController.xib; sourceTree = "<group>"; };
 		C33457C312958CC700CB5270 /* ZMeshWebProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshWebProtocolViewController.h; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 		C33457C512958CC700CB5270 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
 		C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshDefault.png; sourceTree = "<group>"; };
 		C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault@2x.png"; sourceTree = "<group>"; };
-		C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		C3668A201293DDB500EF1FD7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -143,8 +142,6 @@
 		C3668DCC129423C700EF1FD7 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
 		C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		C3668DCE129423C700EF1FD7 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
-		C3668DCF129423C700EF1FD7 /* ASIWebPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIWebPageRequest.h; sourceTree = "<group>"; };
-		C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIWebPageRequest.m; sourceTree = "<group>"; };
 		C376000312967F7A0088D514 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3762294129A63D500E08E0C /* ZMeshLocalProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolViewController.h; sourceTree = "<group>"; };
 		C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolViewController.m; sourceTree = "<group>"; };
@@ -157,6 +154,8 @@
 		C38E132112951D280064F532 /* ZMeshGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshGLViewController.mm; sourceTree = "<group>"; };
 		C38E1353129520870064F532 /* ZMeshCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshCGLView.h; sourceTree = "<group>"; };
 		C38E1354129520870064F532 /* ZMeshCGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZMeshCGLView.mm; sourceTree = "<group>"; };
+		C3945F6A16184A6F00B449FB /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		C3945F6C1618563900B449FB /* zMeshDefault-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault-568h@2x.png"; sourceTree = "<group>"; };
 		C398182C12BBD698006C20DD /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		C398182D12BBD698006C20DD /* box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box@2x.png"; sourceTree = "<group>"; };
 		C398182E12BBD698006C20DD /* flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat.png; sourceTree = "<group>"; };
@@ -224,12 +223,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3945F6B16184A6F00B449FB /* libxml2.2.dylib in Frameworks */,
 				C37EFF8714AD2CAC00199352 /* libz.1.1.3.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
-				C36689D91293DCCA00EF1FD7 /* libxml2.2.7.3.dylib in Frameworks */,
 				C3668A211293DDB500EF1FD7 /* CFNetwork.framework in Frameworks */,
 				C3668A361293DDF600EF1FD7 /* MobileCoreServices.framework in Frameworks */,
 				C3668A411293DE0600EF1FD7 /* SystemConfiguration.framework in Frameworks */,
@@ -273,13 +272,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C305AC9212BCFF3D00038090 /* Models */,
+				C30B46F516187E2300D44BBB /* Models */,
 				8D1107310486CEB800E47090 /* zMesh-Info.plist */,
 				C3C4E46712BD0B4A00F09870 /* Localizable.strings */,
 				C3DB8D08131457F3004362A2 /* zMeshApp.png */,
 				C3DB8D09131457F3004362A2 /* zMeshApp@2x.png */,
 				C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */,
 				C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */,
+				C3945F6C1618563900B449FB /* zMeshDefault-568h@2x.png */,
 				C3FEB5E012AE34AE0033C309 /* Interface */,
 			);
 			name = Resources;
@@ -296,27 +296,10 @@
 				C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */,
 				C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */,
 				C3668A571293DE1C00EF1FD7 /* CoreGraphics.framework */,
-				C36689D81293DCCA00EF1FD7 /* libxml2.2.7.3.dylib */,
+				C3945F6A16184A6F00B449FB /* libxml2.2.dylib */,
 				C37EFF8614AD2CAC00199352 /* libz.1.1.3.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C305AC9212BCFF3D00038090 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C305AC9712BCFF3D00038090 /* stl */,
-			);
-			name = Models;
-			path = ../../Common/Bin/Data/Models;
-			sourceTree = SOURCE_ROOT;
-		};
-		C305AC9712BCFF3D00038090 /* stl */ = {
-			isa = PBXGroup;
-			children = (
-				C305AC9A12BCFF3D00038090 /* cube.stl */,
-			);
-			path = stl;
 			sourceTree = "<group>";
 		};
 		C309207B12A1B6DB00CC6733 /* Interface */ = {
@@ -447,8 +430,6 @@
 				C3668DCC129423C700EF1FD7 /* ASINetworkQueue.h */,
 				C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */,
 				C3668DCE129423C700EF1FD7 /* ASIProgressDelegate.h */,
-				C3668DCF129423C700EF1FD7 /* ASIWebPageRequest.h */,
-				C3668DD0129423C700EF1FD7 /* ASIWebPageRequest.m */,
 			);
 			name = AsiHTTP;
 			path = AsiHTTP/Classes;
@@ -624,7 +605,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "zMesh" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -683,11 +664,12 @@
 				C398183F12BBD698006C20DD /* wire@2x.png in Resources */,
 				C398190D12BBE4B1006C20DD /* save.png in Resources */,
 				C398190E12BBE4B1006C20DD /* save@2x.png in Resources */,
-				C305ACA612BCFF3D00038090 /* cube.stl in Resources */,
 				C3DB8D0A131457F3004362A2 /* zMeshApp.png in Resources */,
 				C3DB8D0B131457F3004362A2 /* zMeshApp@2x.png in Resources */,
 				C34257B9132D2CF9006E4AD4 /* zMeshDefault.png in Resources */,
 				C34257BA132D2CF9006E4AD4 /* zMeshDefault@2x.png in Resources */,
+				C3945F6D1618563900B449FB /* zMeshDefault-568h@2x.png in Resources */,
+				C30B46F616187E2300D44BBB /* Models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +695,6 @@
 				C3668E0F129423C700EF1FD7 /* ASIHTTPRequest.m in Sources */,
 				C3668E10129423C700EF1FD7 /* ASIInputStream.m in Sources */,
 				C3668E11129423C700EF1FD7 /* ASINetworkQueue.m in Sources */,
-				C3668E12129423C700EF1FD7 /* ASIWebPageRequest.m in Sources */,
 				C3AC6AFA1294357E001F3D4B /* ZMeshGenericProtocolViewController.m in Sources */,
 				C3AC6AFB1294357E001F3D4B /* ZMeshHTTPProtocolViewController.m in Sources */,
 				C3AC6AFC1294357E001F3D4B /* ZMeshFileProtocolViewController.m in Sources */,
@@ -829,8 +810,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -841,13 +822,16 @@
 					DEBUG,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"\"${SDK_DIR}/usr/include/libxml2\"",
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
 				);
 				INFOPLIST_FILE = "zMesh-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = zMesh;
+				PROVISIONING_PROFILE = "14472D67-1575-4C4F-9664-20912B94F058";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14472D67-1575-4C4F-9664-20912B94F058";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -856,20 +840,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = zMesh_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = D_IPHONE;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"\"${SDK_DIR}/usr/include/libxml2\"",
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
 				);
 				INFOPLIST_FILE = "zMesh-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = zMesh;
+				PROVISIONING_PROFILE = "14472D67-1575-4C4F-9664-20912B94F058";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14472D67-1575-4C4F-9664-20912B94F058";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -879,15 +866,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "14472D67-1575-4C4F-9664-20912B94F058";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -896,15 +884,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mathieu Ledru (P4WB4CJAMG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "14472D67-1575-4C4F-9664-20912B94F058";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
