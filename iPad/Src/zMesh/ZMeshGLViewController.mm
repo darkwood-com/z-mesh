@@ -27,7 +27,6 @@
 #import "ZMeshGLViewController.h"
 #import "ZMeshSaveViewController.h"
 #import "ZMeshRenderViewController.h"
-#import "ZMeshLocalProtocolViewController.h"
 
 // Uniform index.
 enum {
@@ -167,8 +166,11 @@ enum {
 
 - (void)addMesh:(id)sender
 {
-	self.popoverFileViewController = [[[ZMeshPopoverFileProtocolViewController alloc] initWithDelegate:self] autorelease];
-	[self.popoverFileViewController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+	if(!self.popoverFileViewController.popoverVisible)
+	{
+		self.popoverFileViewController = [[[ZMeshPopoverFileProtocolViewController alloc] initWithDelegate:self] autorelease];
+		[self.popoverFileViewController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+	}
 }
 
 - (void)saveMesh:(id)sender
@@ -193,17 +195,6 @@ enum {
 {
 	[self.popoverFileViewController dismissPopoverAnimated:YES];
 	[super openMeshType:aType andData:aData];
-}
-
-- (void)saveMeshToPath:(NSString*)aPath
-{
-	[self dismissModalViewControllerAnimated:YES];
-	if(aPath)
-	{
-		aPath = [[ZMeshLocalProtocolViewController directoryPath] stringByAppendingPathComponent:aPath];
-
-		[super saveMeshToPath:aPath];
-	}
 }
 
 - (void)renderMeshMode:(NSString*)aMode

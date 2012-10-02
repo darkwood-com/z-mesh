@@ -28,6 +28,8 @@
 #import "ZMeshGLViewController.h"
 #import "ZMeshLocalProtocolViewController.h"
 #import "ZMeshDropBoxProtocolViewController.h"
+#import "ZMeshDropbBoxConf.h"
+#import "ZMeshSaveViewController.h"
 
 @implementation ZMeshRotateViewController
 
@@ -38,13 +40,30 @@
 
 @end
 
+@interface ZMeshAppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
+@end
+
 @implementation ZMeshAppDelegate
 
 @synthesize window;
 @synthesize viewController;
 
+- (void)dealloc
+{
+    [self setViewController:nil];
+    [self setWindow:nil];
+    
+    [super dealloc];
+}
+
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
+	DBSession* session = [[DBSession alloc] initWithAppKey:DropbBoxAppKey appSecret:DropbBoxAppSecret root:kDBRootAppFolder];
+	session.delegate = self;
+	[DBSession setSharedSession:session];
+	[session release];
+	[DBRequest setNetworkRequestDelegate:self];
+	
 	//copy sample files at first app launch
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	int launchCount = [defaults integerForKey:@"launchCount" ] + 1;
@@ -121,6 +140,11 @@
 					[(ZMeshDropBoxProtocolViewController*)top update];
 				}
 			}
+			
+			if([[gl modalViewController] isKindOfClass:[ZMeshSaveViewController class]])
+			{
+				[(ZMeshSaveViewController*)[gl modalViewController] update];
+			}
 		}
 		
 		return YES;
@@ -129,12 +153,32 @@
 	return NO;
 }
 
-- (void)dealloc
+#pragma mark -
+#pragma mark DBSessionDelegate methods
+
+- (void)sessionDidReceiveAuthorizationFailure:(DBSession*)session userId:(NSString *)userId
 {
-    [self setViewController:nil];
-    [self setWindow:nil];
-    
-    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark DBNetworkRequestDelegate methods
+
+static int outstandingRequests;
+
+- (void)networkRequestStarted
+{
+	outstandingRequests++;
+	if (outstandingRequests == 1) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+	}
+}
+
+- (void)networkRequestStopped
+{
+	outstandingRequests--;
+	if (outstandingRequests == 0) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+	}
 }
 
 @end

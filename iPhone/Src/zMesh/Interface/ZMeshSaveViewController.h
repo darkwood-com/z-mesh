@@ -26,17 +26,26 @@
 
 #import "ZMeshCGLDelegate.h"
 
+@class DBRestClient;
+
 @interface ZMeshSaveViewController : UIViewController<UITextFieldDelegate> {
 	id<ZMeshCGLDelegate> delegate;
 	
 	UITextField* filePathText;
+	
+	DBRestClient* restClient;
+	int saveCount; //manage files that are waiting for saving
 }
 
 @property (assign, nonatomic) id<ZMeshCGLDelegate> delegate;
 @property (assign, nonatomic) IBOutlet UITextField* filePathText;
+@property (assign, nonatomic) IBOutlet UISwitch* isLocalSave;
+@property (assign, nonatomic) IBOutlet UISwitch* isDropBoxSave;
 
+- (IBAction) dropboxSave:(id)sender;
 - (IBAction) saveOBJ:(id)sender;
 - (IBAction) saveSTL:(id)sender;
 - (IBAction) cancel:(id)sender;
+- (void) update;
 
 @end

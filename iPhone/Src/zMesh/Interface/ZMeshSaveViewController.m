@@ -22,11 +22,40 @@
  *
  */
 
+#import <DropboxSDK/DropboxSDK.h>
+
 #import "ZMeshSaveViewController.h"
+#import "ZMeshLocalProtocolViewController.h"
+
+@interface ZMeshSaveViewController () <DBRestClientDelegate>
+- (void) saveFile:(NSString*)aFile extension:(NSString*)extension;
+- (void) saveFileEnded;
+- (DBRestClient *)restClient;
+@end
 
 @implementation ZMeshSaveViewController
 @synthesize delegate;
 @synthesize filePathText;
+@synthesize isLocalSave;
+@synthesize isDropBoxSave;
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+	{
+        saveCount = 0;
+    }
+	
+    return self;
+}
+
+- (void) viewDidLoad
+{
+	[super viewDidLoad];
+	
+	[self update];
+}
 
 - (void)dealloc
 {
@@ -43,19 +72,92 @@
 	return YES;
 }
 
+- (IBAction) dropboxSave:(id)sender
+{
+	BOOL isLinked = [[DBSession sharedSession] isLinked];
+	
+	if(isDropBoxSave.on && !isLinked)
+	{
+		[[DBSession sharedSession] linkFromController:self];
+	}
+}
+
+- (void) saveFile:(NSString*)aFile extension:(NSString*)extension
+{
+	if([aFile isEqualToString:@""]) aFile = @"mesh";
+	aFile = [aFile stringByAppendingPathExtension:extension];
+	
+	NSFileManager* fileManager = [NSFileManager defaultManager];
+	NSError* error;
+	
+	NSString* tmpDirectory = NSTemporaryDirectory();
+	NSString* tmpPath = [tmpDirectory stringByAppendingPathComponent:aFile];
+	[self.delegate saveMeshToPath:tmpPath];
+	
+	if(isLocalSave.on)
+	{
+		NSString* localPath = [[ZMeshLocalProtocolViewController directoryPath] stringByAppendingPathComponent:aFile];
+		[fileManager copyItemAtPath:tmpPath toPath:localPath error:&error];
+	}
+	
+	BOOL isLinked = [[DBSession sharedSession] isLinked];
+	
+	if(isDropBoxSave.on && isLinked)
+	{
+		saveCount++;
+		[self.restClient uploadFile:aFile toPath:@"/" withParentRev:nil fromPath:tmpPath];
+	}
+	
+	[self saveFileEnded];
+}
+
+- (void) saveFileEnded
+{
+	if(saveCount == 0) [self dismissModalViewControllerAnimated:YES];
+}
+
 - (void) saveOBJ:(id)sender
 {
-	[self.delegate saveMeshToPath:[self.filePathText.text stringByAppendingPathExtension:@"obj"]];
+	[self saveFile:self.filePathText.text extension:@"obj"];
 }
 
 - (void) saveSTL:(id)sender
 {
-	[self.delegate saveMeshToPath:[self.filePathText.text stringByAppendingPathExtension:@"stl"]];
+	[self saveFile:self.filePathText.text extension:@"stl"];
 }
 
 - (void) cancel:(id)sender
 {
-	[self.delegate saveMeshToPath:nil];
+	[self saveFileEnded];
+}
+
+- (void) update
+{
+	BOOL isLinked = [[DBSession sharedSession] isLinked];
+	
+	isDropBoxSave.on = isLinked;
+}
+
+- (DBRestClient *)restClient
+{
+	if (!restClient)
+	{
+		restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+		restClient.delegate = self;
+	}
+	return restClient;
+}
+
+- (void)restClient:(DBRestClient*)client uploadedFile:(NSString*)destPath from:(NSString*)srcPath metadata:(DBMetadata*)metadata
+{
+	saveCount--;
+	[self saveFileEnded];
+}
+
+- (void)restClient:(DBRestClient*)client uploadFileFailedWithError:(NSError*)error
+{
+	saveCount--;
+	[self saveFileEnded];
 }
 
 @end

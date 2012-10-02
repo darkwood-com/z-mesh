@@ -26,9 +26,8 @@
 
 #import <DropboxSDK/DropboxSDK.h>
 #import "ZMeshDropBoxProtocolCell.h"
-#import "ZMeshDropbBoxConf.h"
 
-@interface ZMeshDropBoxProtocolViewController () <DBSessionDelegate, DBNetworkRequestDelegate, DBRestClientDelegate>
+@interface ZMeshDropBoxProtocolViewController () <DBRestClientDelegate>
 - (DBRestClient *)restClient;
 @end
 
@@ -44,12 +43,6 @@
     if (self)
 	{
         self.directoryContent = [NSMutableArray array];
-		
-		DBSession* session = [[DBSession alloc] initWithAppKey:DropbBoxAppKey appSecret:DropbBoxAppSecret root:kDBRootAppFolder];
-		session.delegate = self;
-		[DBSession setSharedSession:session];
-		[session release];
-		[DBRequest setNetworkRequestDelegate:self];
     }
 	
 	return self;
@@ -243,34 +236,6 @@
 - (void)restClient:(DBRestClient*)client deletedPath:(NSString *)path
 {
 	[self update];
-}
-
-#pragma mark -
-#pragma mark DBSessionDelegate methods
-
-- (void)sessionDidReceiveAuthorizationFailure:(DBSession*)session userId:(NSString *)userId
-{
-}
-
-#pragma mark -
-#pragma mark DBNetworkRequestDelegate methods
-
-static int outstandingRequests;
-
-- (void)networkRequestStarted
-{
-	outstandingRequests++;
-	if (outstandingRequests == 1) {
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-	}
-}
-
-- (void)networkRequestStopped
-{
-	outstandingRequests--;
-	if (outstandingRequests == 0) {
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-	}
 }
 
 @end

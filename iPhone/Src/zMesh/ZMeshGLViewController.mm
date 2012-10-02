@@ -28,7 +28,6 @@
 #import "ZMeshFileProtocolViewController.h"
 #import "ZMeshSaveViewController.h"
 #import "ZMeshRenderViewController.h"
-#import "ZMeshLocalProtocolViewController.h"
 
 // Uniform index.
 enum {
@@ -191,17 +190,6 @@ enum {
 {
 	[self.navigationController popToViewController:self animated:YES];
 	[super openMeshType:aType andData:aData];
-}
-
-- (void)saveMeshToPath:(NSString*)aPath
-{
-	[self dismissModalViewControllerAnimated:YES];
-	if(aPath)
-	{
-		aPath = [[ZMeshLocalProtocolViewController directoryPath] stringByAppendingPathComponent:aPath];
-
-		[super saveMeshToPath:aPath];
-	}
 }
 
 - (void)renderMeshMode:(NSString*)aMode
