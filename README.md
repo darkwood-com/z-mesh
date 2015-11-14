@@ -1,4 +1,4 @@
 zMesh
 =====
 
-More informations at [http://www.darkwood.fr/pagesperso/zmesh/](http://www.darkwood.fr/pagesperso/zmesh/)
+More informations at [http://apps.darkwood.fr/zmesh](http://apps.darkwood.fr/zmesh)
