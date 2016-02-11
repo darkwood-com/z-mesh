@@ -18,6 +18,7 @@
 		C33457C612958CC700CB5270 /* ZMeshWebProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */; };
 		C34257B9132D2CF9006E4AD4 /* zMeshDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */; };
 		C34257BA132D2CF9006E4AD4 /* zMeshDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */; };
+		C365749F1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C365749E1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.m */; };
 		C3668A211293DDB500EF1FD7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A201293DDB500EF1FD7 /* CFNetwork.framework */; };
 		C3668A361293DDF600EF1FD7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */; };
 		C3668A411293DE0600EF1FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */; };
@@ -34,7 +35,6 @@
 		C3668E0F129423C700EF1FD7 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DC7129423C700EF1FD7 /* ASIHTTPRequest.m */; };
 		C3668E10129423C700EF1FD7 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCB129423C700EF1FD7 /* ASIInputStream.m */; };
 		C3668E11129423C700EF1FD7 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */; };
-		C3762297129A63D500E08E0C /* ZMeshLocalProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */; };
 		C37B960B1619FB0300BC3DA6 /* ZMeshFileProtocolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B960A1619FB0300BC3DA6 /* ZMeshFileProtocolCell.xib */; };
 		C37B960D1619FB4600BC3DA6 /* ZMeshFileProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B960C1619FB4600BC3DA6 /* ZMeshFileProtocolViewController.xib */; };
 		C37B960F1619FC1800BC3DA6 /* ZMeshLocalProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37B960E1619FC1800BC3DA6 /* ZMeshLocalProtocolViewController.xib */; };
@@ -117,6 +117,8 @@
 		C33457C512958CC700CB5270 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZMeshWebProtocolViewController.xib; sourceTree = "<group>"; };
 		C34257B7132D2CF9006E4AD4 /* zMeshDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zMeshDefault.png; sourceTree = "<group>"; };
 		C34257B8132D2CF9006E4AD4 /* zMeshDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zMeshDefault@2x.png"; sourceTree = "<group>"; };
+		C365749D1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMeshLocalProtocolViewController.h; sourceTree = "<group>"; };
+		C365749E1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMeshLocalProtocolViewController.m; sourceTree = "<group>"; };
 		C3668A201293DDB500EF1FD7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C3668A351293DDF600EF1FD7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C3668A401293DE0600EF1FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -151,8 +153,6 @@
 		C3668DCD129423C700EF1FD7 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		C3668DCE129423C700EF1FD7 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		C376000312967F7A0088D514 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C3762294129A63D500E08E0C /* ZMeshLocalProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZMeshLocalProtocolViewController.h; path = /Users/math/Mathieu/Programmation/Programmation/zMesh/zMesh/iPhone/Src/zMesh/Interface/Protocol/ZMeshLocalProtocolViewController.h; sourceTree = "<absolute>"; };
-		C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZMeshLocalProtocolViewController.m; path = /Users/math/Mathieu/Programmation/Programmation/zMesh/zMesh/iPhone/Src/zMesh/Interface/Protocol/ZMeshLocalProtocolViewController.m; sourceTree = "<absolute>"; };
 		C37B960A1619FB0300BC3DA6 /* ZMeshFileProtocolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshFileProtocolCell.xib; sourceTree = "<group>"; };
 		C37B960C1619FB4600BC3DA6 /* ZMeshFileProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshFileProtocolViewController.xib; sourceTree = "<group>"; };
 		C37B960E1619FC1800BC3DA6 /* ZMeshLocalProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZMeshLocalProtocolViewController.xib; sourceTree = "<group>"; };
@@ -499,8 +499,8 @@
 				C3AC6AF71294357E001F3D4B /* ZMeshHTTPProtocolViewController.m */,
 				C3C4E4CA12BD0ED400F09870 /* ZMeshHTTPProtocolViewController.xib */,
 				C3FEB66B12AE420C0033C309 /* ZMeshLocalProtocolView */,
-				C3762294129A63D500E08E0C /* ZMeshLocalProtocolViewController.h */,
-				C3762295129A63D500E08E0C /* ZMeshLocalProtocolViewController.m */,
+				C365749D1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.h */,
+				C365749E1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.m */,
 				C37B960E1619FC1800BC3DA6 /* ZMeshLocalProtocolViewController.xib */,
 				C33457C312958CC700CB5270 /* ZMeshWebProtocolViewController.h */,
 				C33457C412958CC700CB5270 /* ZMeshWebProtocolViewController.m */,
@@ -739,12 +739,12 @@
 				C38E1355129520870064F532 /* ZMeshCGLView.mm in Sources */,
 				C33457C612958CC700CB5270 /* ZMeshWebProtocolViewController.m in Sources */,
 				C30A96171296BD9A00867D18 /* ZMeshSaveViewController.m in Sources */,
-				C3762297129A63D500E08E0C /* ZMeshLocalProtocolViewController.m in Sources */,
 				C309203712A1ADA500CC6733 /* ZMeshRenderViewController.m in Sources */,
 				C3FEB4E912AE25EC0033C309 /* ZMeshFileProtocolCell.m in Sources */,
 				C3FEB66F12AE420C0033C309 /* ZMeshLocalProtocolCell.m in Sources */,
 				C3FD16B01619CBD4006250DC /* ZMeshDropBoxProtocolCell.m in Sources */,
 				C3FD16C01619F099006250DC /* ZMeshDropBoxProtocolViewController.m in Sources */,
+				C365749F1C6CCBC100FD5899 /* ZMeshLocalProtocolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,7 +824,7 @@
 					DEBUG,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"\"${SDK_DIR}/usr/include/libxml2\"",
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
@@ -853,7 +853,7 @@
 				GCC_PREFIX_HEADER = zMesh_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = D_IPHONE;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"\"${SDK_DIR}/usr/include/libxml2\"",
 					"\"$(SRCROOT)/../../Common/Lib/vcglib\"",
